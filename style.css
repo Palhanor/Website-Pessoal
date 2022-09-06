@@ -376,8 +376,6 @@ body {
   margin-bottom: 0.4rem;
 }
 .portfolio__card-tag {
-  color: #000000;
-  background-color: #d1d1d1;
   padding: 0.3rem;
   margin-right: 0.5rem;
   border-radius: 3px;
@@ -388,6 +386,41 @@ body {
   text-decoration: none;
   color: #2e2e2e;
   margin-right: 0.6rem;
+}
+
+.tag-html {
+  background-color: #f4a684;
+  color: black;
+}
+
+.tag-scss {
+  background-color: #e2acc8;
+  color: black;
+}
+
+.tag-javascript {
+  background-color: #f4e57e;
+  color: black;
+}
+
+.tag-python {
+  background-color: #ffd264;
+  color: black;
+}
+
+.tag-react {
+  background-color: #94e6fd;
+  color: black;
+}
+
+.tag-typescript {
+  background-color: #33adff;
+  color: black;
+}
+
+.tag-expo {
+  background-color: #e6e6e6;
+  color: black;
 }
 
 .artigos {

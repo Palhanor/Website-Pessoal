@@ -119,8 +119,6 @@
     }
 
     &-tag {
-      color: #000000;
-      background-color: #d1d1d1;
       padding: 0.3rem;
       margin-right: 0.5rem;
       border-radius: 3px;
@@ -134,4 +132,33 @@
       margin-right: .6rem;
     }
   }
+}
+
+.tag-html {
+  background-color: lighten($color: #EB6227, $amount: 20);
+  color: black;
+}
+.tag-scss { 
+  background-color: lighten($color: #C86095, $amount: 20);
+  color: black;
+}
+.tag-javascript { 
+  background-color: lighten($color: #F0DB4F, $amount: 10);
+  color: black;
+}
+.tag-python {
+  background-color: lighten($color: #FFC331, $amount: 10);
+  color: black;
+}
+.tag-react {
+  background-color: lighten($color: #62DAFC, $amount: 10);
+  color: black;
+}
+.tag-typescript {
+  background-color: lighten($color: #007ACC, $amount: 20);
+  color: black;
+}
+.tag-expo {
+  background-color: darken($color: #FFFFFF, $amount: 10);
+  color: black;
 }

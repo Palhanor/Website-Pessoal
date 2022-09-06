@@ -5,8 +5,12 @@ AFAZERES
   * Adaptar as dimensoes dos elementos
   * Criar a barra de navegacao inferior para subir ou descer
   * Repensar o sistema de cards do portfolio
-3. Melhorar a semântica do HTML
-4. Criar filtros para o portfólio
+3. Melhorar a semântica do HTML com tags descritivas
+4. Ajeitar a estilização (cores, mixins, placeholders...)
+5. Melhorar a orgfanização dos códigos JavaScript
+6. Criar sistema de modal exibindo detalhes do portfólio
+7. Criar filtros para o portfólio
+8. Adicionar campo para blog nativo no website
 -->
 
 <!DOCTYPE html>
@@ -15,6 +19,15 @@ AFAZERES
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lucas Palhano Fonseca" />
+    <meta
+      name="keywords"
+      content="Progrmação, Desenvolvedor, HTML, CSS, JavaScript, React"
+    />
+    <meta
+      name="description"
+      content="Website pessoal contendo informações sobre o desenvolvedor Lucas Palhano"
+    />
     <title>Lucas Palhano</title>
     <link rel="icon" href="./assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -185,9 +198,9 @@ AFAZERES
               simplicidade, organização e personalização.
             </p>
             <h4 class="portfolio__card-subtitulo">Tecnologias</h4>
-            <span class="portfolio__card-tag">React Native</span>
-            <span class="portfolio__card-tag">Expo</span>
-            <span class="portfolio__card-tag">TypeScript</span>
+            <span class="portfolio__card-tag tag-react">React Native</span>
+            <span class="portfolio__card-tag tag-expo">Expo</span>
+            <span class="portfolio__card-tag tag-typescript">TypeScript</span>
             <h4 class="portfolio__card-subtitulo">Links</h4>
             <a
               href="https://github.com/Palhanor/Notely"
@@ -211,15 +224,14 @@ AFAZERES
           <div class="portfolio__card-texto">
             <h3 class="portfolio__card-titulo">QR Key</h3>
             <p class="portfolio__card-descricao">
-              O QR Key tem como intúito de permitir a criação e
-              visualização de QR Codes privados de forma simples e intuitiva,
-              bastando configurar uma senha mestra necessária para sua
-              decodificação.
+              O QR Key tem como intúito de permitir a criação e visualização de
+              QR Codes privados de forma simples e intuitiva, bastando
+              configurar uma senha mestra necessária para sua decodificação.
             </p>
             <h4 class="portfolio__card-subtitulo">Tecnologias</h4>
-            <span class="portfolio__card-tag">React Native</span>
-            <span class="portfolio__card-tag">Expo</span>
-            <span class="portfolio__card-tag">TypeScript</span>
+            <span class="portfolio__card-tag tag-react">React Native</span>
+            <span class="portfolio__card-tag tag-expo">Expo</span>
+            <span class="portfolio__card-tag tag-typescript">TypeScript</span>
             <h4 class="portfolio__card-subtitulo">Links</h4>
             <a
               href="https://github.com/Palhanor/QR-Key"
@@ -242,7 +254,7 @@ AFAZERES
               forma dinâmica e automatizada.
             </p>
             <h4 class="portfolio__card-subtitulo">Tecnologias</h4>
-            <span class="portfolio__card-tag">Python</span>
+            <span class="portfolio__card-tag tag-python">Python</span>
             <h4 class="portfolio__card-subtitulo">Links</h4>
             <a
               href="https://github.com/Palhanor/DynOS"
@@ -265,9 +277,9 @@ AFAZERES
               trajetória e projetos realizados ao longo do tempo.
             </p>
             <h4 class="portfolio__card-subtitulo">Tecnologias</h4>
-            <span class="portfolio__card-tag">HTML5</span>
-            <span class="portfolio__card-tag">SCSS</span>
-            <span class="portfolio__card-tag">JavaScript</span>
+            <span class="portfolio__card-tag tag-html">HTML5</span>
+            <span class="portfolio__card-tag tag-scss">SCSS</span>
+            <span class="portfolio__card-tag tag-javascript">JavaScript</span>
             <h4 class="portfolio__card-subtitulo">Links</h4>
           </div>
         </li>
@@ -405,7 +417,7 @@ AFAZERES
 
     <script type="text/javascript" src="./vanilla-tilt.js"></script>
     <script type="text/javascript" src="./cards-3d.js"></script>
-    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
     <script></script>
   </body>
 </html>
