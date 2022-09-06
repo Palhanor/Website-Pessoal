@@ -1,0 +1,137 @@
+.portfolio {
+  margin: 6vh 5vw 10vh;
+
+  &__titulo {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #4f4f4f;
+  }
+
+  &__cards {
+    margin-top: 2rem;
+    list-style: none;
+    display: grid;
+    gap: 2rem;
+
+    @include small() {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__card {
+    &-borda {
+      height: 32vh;
+      border-radius: 10px;
+      background-color: $white;
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+      @include backgroundImage("./assets/background.png");
+      transform-style: preserve-3d;
+      transition: 0.2s;
+      position: relative;
+
+      @include small() {
+        height: 40vh;
+        border-radius: 20px;
+      }
+
+      &:hover {
+        padding: 6px;
+      }
+
+      &:hover .portfolio__card-tela {
+        display: block;
+      }
+
+      &:hover .portfolio__card-texto {
+        display: block;
+      }
+
+      &:hover .portfolio__card-imagem {
+        filter: grayscale(100%) blur(1px);
+      }
+    }
+
+    &-imagem {
+      height: 100%;
+      border-radius: 7px;
+      display: block;
+
+      @include small() {
+        border-radius: 16px;
+      }
+
+      &--notely {
+        @include backgroundImage("./assets/projetos/notely.png");
+      }
+      &--qrkey {
+        @include backgroundImage("./assets/projetos/qrkey.png");
+      }
+      &--dynos {
+        @include backgroundImage("./assets/projetos/dynos.png");
+      }
+      &--website {
+        @include backgroundImage("./assets/projetos/website.png");
+      }
+    }
+
+    &-tela {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      border-radius: 7px;
+      background-color: $white;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      display: none;
+      filter: opacity(82%);
+
+      @include small() {
+        border-radius: 16px;
+      }
+    }
+
+    &-texto {
+      display: none;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: calc(100% - 20px);
+      padding: 1.5rem;
+    }
+
+    &-titulo {
+      font-size: 1.6rem;
+      margin-bottom: .6rem;
+    }
+
+    &-descricao {
+      font-size: 1.1rem;
+      color: #2e2e2e;
+      margin-bottom: 1rem;
+    }
+
+    &-subtitulo {
+      color: #2e2e2e;
+      margin-top: 1rem;
+      margin-bottom: .4rem;
+    }
+
+    &-tag {
+      color: #000000;
+      background-color: #d1d1d1;
+      padding: 0.3rem;
+      margin-right: 0.5rem;
+      border-radius: 3px;
+      display: inline-block;
+      font-size: 0.8rem;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: #2e2e2e;
+      margin-right: .6rem;
+    }
+  }
+}

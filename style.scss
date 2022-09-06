@@ -1,0 +1,15 @@
+// sass -w style/scss/style.scss style/css/style.css
+
+// Adicionar o normalize.scss
+@import "style/responsivo";
+@import "style/cores";
+@import "style/funcoes";
+
+@import "style/geral";
+@import "style/navbar";
+@import "style/home";
+@import "style/sobre";
+@import "style/portfolio";
+@import "style/artigos";
+@import "style/curriculo";
+@import "style/rodape";

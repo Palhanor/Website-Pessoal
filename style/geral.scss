@@ -1,0 +1,30 @@
+// GERAL
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Proza Libre", sans-serif;
+  // font-family: "Share Tech Mono", monospace;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background;
+}
+
+// SCROLLBAR
+::-webkit-scrollbar {
+  width: 8px;
+
+  &-track {
+    background: transparent;
+  }
+
+  &-thumb {
+    background: rgb(172, 172, 172);
+
+    &:hover {
+      background: rgb(119, 119, 119);
+    }
+  }
+}

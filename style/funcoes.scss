@@ -1,0 +1,16 @@
+// Usar placeholder selectors para tags diferentes com estilos comuns
+// https://sass-lang.com/documentation/style-rules/placeholder-selectors
+
+@mixin backgroundImage($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin flexContainer($justify: flex-start, $align: stretch, $direction: "row") {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}

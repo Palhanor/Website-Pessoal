@@ -1,0 +1,21 @@
+.rodape {
+  width: 90vw;
+  height: 12vh;
+  margin: 5vh 5vw 0 5vw;
+  padding: 0 2rem;
+  border-top: 1px solid #cad7da;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    font-size: 0.9rem;
+    color: #4f4f4f;
+  }
+
+  a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #4f4f4f;
+  }
+}

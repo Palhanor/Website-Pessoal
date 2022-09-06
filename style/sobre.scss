@@ -1,0 +1,76 @@
+.sobre {
+  margin: 6vh 5vw 10vh;
+
+  @include small() {
+    @include flexContainer(space-between);
+  }
+
+  &__texto {
+    @include small() {
+      width: 60%;
+    }
+  }
+
+  &__titulo {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #4f4f4f;
+  }
+
+  p {
+    font-size: 1.2rem;
+    text-align: justify;
+    color: rgb(81, 81, 81);
+  }
+
+  &__insignias {
+    &-borda {
+      height: 45vh;
+      @include backgroundImage("./assets/background.png");
+      border-radius: 20px;
+      padding: 3px;
+      box-shadow: 3px 3px 39px rgba(0, 0, 0, 0.03);
+      margin-top: 3rem;
+
+      @include small() {
+        width: 30%;
+        margin-right: 3rem;
+      }
+    }
+
+    &-conteudo {
+      height: 100%;
+      background-color: $white;
+      border-radius: 18px;
+      padding: 1.5rem;
+    }
+
+    &-titulo {
+      text-align: center;
+      font-size: 1.4rem;
+      color: #4f4f4f;
+      margin-bottom: 2.5rem;
+    }
+
+    &-grid {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 25px;
+
+      li {
+        display: flex;
+        flex-flow: column-reverse;
+        align-items: center;
+        font-weight: 600;
+        color: #6d6d6d;
+        font-size: 0.6rem;
+      }
+
+      img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
