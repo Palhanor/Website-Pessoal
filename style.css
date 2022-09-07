@@ -112,7 +112,7 @@ body {
 
 .navbar {
   height: 10vh;
-  padding: 0 3rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +128,36 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: "row";
+    padding: 0 3rem;
   }
+}
+.navbar--mobile-topo {
+  background-image: none;
+  background-color: transparent;
+  top: 0;
+  bottom: auto;
+  justify-content: center;
+}
+.navbar--mobile-base {
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  background-position: center;
+  top: auto;
+  bottom: 0;
+  justify-content: space-between;
+}
+.navbar--desktop-topo {
+  background-image: none;
+  background-color: transparent;
+}
+.navbar--desktop-home {
+  background-image: none;
+  background-color: #f1f5f6;
+}
+.navbar--desktop-inferior {
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  background-position: center;
 }
 .navbar__secoes {
   width: 30vw;
@@ -151,6 +180,28 @@ body {
   height: 5vh;
   cursor: pointer;
 }
+.navbar__controles {
+  display: none;
+  width: 25vw;
+  justify-content: space-between;
+}
+.navbar__subir {
+  width: 30px;
+  height: 20px;
+  background-image: url("./assets/icones/down.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.navbar__descer {
+  width: 30px;
+  height: 20px;
+  background-image: url("./assets/icones/down.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .navbar__contatos {
   width: 30vw;
   list-style: none;
@@ -168,6 +219,14 @@ body {
   font-size: 1.2rem;
   cursor: pointer;
   margin-left: 1.5rem;
+}
+
+.remove-controles {
+  display: none;
+}
+
+.adiciona-controles {
+  display: flex;
 }
 
 .home {
@@ -591,7 +650,7 @@ body {
 .rodape {
   width: 90vw;
   height: 15vh;
-  margin: 5vh 5vw 0 5vw;
+  margin: 5vh 5vw 10vh 5vw;
   padding: 1rem 2rem;
   border-top: 1px solid #cad7da;
   display: flex;
@@ -602,6 +661,7 @@ body {
 @media (min-width: 576px) {
   .rodape {
     justify-content: space-between;
+    margin: 5vh 5vw 0 5vw;
     flex-direction: row;
     padding: 0 2rem;
     height: 12vh;

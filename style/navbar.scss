@@ -1,6 +1,6 @@
 .navbar {
   height: 10vh;
-  padding: 0 3rem;
+  padding: 0 2rem;
   @include flexContainer(center, center);
   position: fixed;
   top: 0;
@@ -9,6 +9,41 @@
   
   @include small() {
     @include flexContainer(space-between, center);
+    padding: 0 3rem;
+  }
+
+  &--mobile {
+    &-topo {
+      background-image: none;
+      background-color: transparent;
+      top: 0;
+      bottom: auto;
+      justify-content: center;
+    }
+    &-base {
+      background-image: url('./assets/background.png');
+      background-size: cover;
+      background-position: center;
+      top: auto;
+      bottom: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &--desktop {
+    &-topo {
+      background-image: none;
+      background-color: transparent;
+    }
+    &-home {
+      background-image: none;
+      background-color: rgb(241, 245, 246);
+    }
+    &-inferior {
+      background-image: url('./assets/background.png');
+      background-size: cover;
+      background-position: center;
+    }
   }
 
   &__secoes {
@@ -31,6 +66,25 @@
     cursor: pointer;
   }
 
+  &__controles {
+    display: none;
+    width: 25vw;
+    justify-content: space-between;
+  }
+
+  &__subir {
+    width: 30px;
+    height: 20px;
+    @include backgroundImage("./assets/icones/down.png");
+    transform: rotate(180deg);
+  }
+  
+  &__descer {
+    width: 30px;
+    height: 20px;
+    @include backgroundImage("./assets/icones/down.png");
+  }
+
   &__contatos {
     width: 30vw;
     list-style: none;
@@ -46,4 +100,12 @@
       margin-left: 1.5rem;
     }
   }
+}
+
+.remove-controles {
+  display: none;
+}
+
+.adiciona-controles {
+  display: flex;
 }

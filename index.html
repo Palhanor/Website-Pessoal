@@ -1,15 +1,11 @@
 <!-- 
 AFAZERES
 1. Ajeitar texto (melhorar conteúdo e corrigir portugues)
-2. Fazer a página responsiva
-  * Ajeitar a barra de navegacao inferior para subir ou descer
-  * Repensar o sistema de cards do portfolio
+2. Repensar o sistema de cards do portfolio
 3. Melhorar a semântica do HTML com tags descritivas
 4. Ajeitar a estilização (cores, mixins, placeholders...)
-5. Melhorar a orgfanização dos códigos JavaScript
-6. Criar sistema de modal exibindo detalhes do portfólio
-  * Abrir com descrição mais detalhada
-  * Exibir uma galeria de imagens e gifs
+5. Melhorar a organização dos códigos JavaScript
+6. Criar sistema de modal exibindo detalhes do portfólio (modelo Netflix)
 7. Criar filtros para o portfólio
 8. Adicionar campo para blog nativo no website
 9. Adicionar os protótipos do Figma dentro dos cards do portfólio
@@ -54,7 +50,15 @@ AFAZERES
         <li class="botao-artigos">Artigos</li>
         <li class="botao-curriculo">Curriculo</li>
       </ul>
-      <img src="./assets/logo_preta.png" alt="Logo" class="navbar__logo" />
+      <picture>
+        <source media="(max-width: 576px)" srcset="./assets/logo_branca.png" />
+        <source media="(min-width: 576px)" srcset="./assets/logo_preta.png" />
+        <img src="./assets/logo_branca.png" alt="Logo" class="navbar__logo" />
+      </picture>
+      <div class="navbar__controles controles--removidos">
+        <div class="navbar__subir"></div>
+        <div class="navbar__descer"></div>
+      </div>
       <ul class="navbar__contatos">
         <li>
           <a href="https://www.linkedin.com/in/lucaspalhano" target="_blank">
@@ -218,6 +222,12 @@ AFAZERES
               class="portfolio__card-link"
               >Behance</a
             >
+            <a
+              href="https://www.figma.com/proto/m8hfIAfIwQXoQR1ulxm3GM/Notely?scaling=scale-down&page-id=0%3A1&starting-point-node-id=63%3A325&node-id=63%3A325"
+              target="_blank"
+              class="portfolio__card-link"
+              >Figma</a
+            >
           </div>
         </li>
         <li id="qrkey" class="portfolio__card-borda">
@@ -285,6 +295,12 @@ AFAZERES
             <span class="portfolio__card-tag tag-scss">SCSS</span>
             <span class="portfolio__card-tag tag-javascript">JavaScript</span>
             <h4 class="portfolio__card-subtitulo">Links</h4>
+            <a
+              href="https://github.com/Palhanor/website"
+              target="_blank"
+              class="portfolio__card-link"
+              >Github</a
+            >
           </div>
         </li>
       </ul>
@@ -426,6 +442,5 @@ AFAZERES
     <script type="text/javascript" src="./vanilla-tilt.js"></script>
     <script type="text/javascript" src="./cards-3d.js"></script>
     <script type="text/javascript" src="./app.js"></script>
-    <script></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 .rodape {
   width: 90vw;
   height: 15vh;
-  margin: 5vh 5vw 0 5vw;
+  margin: 5vh 5vw 10vh 5vw;
   padding: 1rem 2rem;
   border-top: 1px solid #cad7da;
   display: flex;
@@ -11,6 +11,7 @@
   
   @include small() {
     justify-content: space-between;
+    margin: 5vh 5vw 0 5vw;
     flex-direction: row;
     padding: 0 2rem;
     height: 12vh;
