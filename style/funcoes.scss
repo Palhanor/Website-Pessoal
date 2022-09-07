@@ -14,3 +14,86 @@
   align-items: $align;
   flex-direction: $direction;
 }
+
+%tag {
+  padding: 0.3rem;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+%secao {
+  margin: 6vh 7vw 10vh;
+
+  @include small() {
+    margin: 6vh 5vw 10vh;
+  }
+}
+
+%titulo-secao {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #2d2d2d;
+
+  @include small() {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+%subtitulo-secao {
+  font-size: 1rem;
+  color: #4f4f4f;
+  margin-bottom: 0.6rem;
+  
+  @include small() {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+
+  }
+}
+
+%texto-conteudo {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #303030;
+  line-height: 28px;
+  
+  @include small() {
+    font-size: 1.2rem;
+  }
+}
+
+%texto-descricao {
+  display: none;
+  color: #6d6d6d;
+  margin-bottom: .5rem;
+
+  @include small() {
+    display: block;
+  }
+}
+
+%data {
+  color: #8b8b8b;
+  margin: 0.2rem 0 .4rem;
+  font-size: .8rem;
+  
+  @include small() {
+    margin: 0.4rem 0;
+    font-size: .85rem;
+  }
+}
+
+%link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #4f4f4f;
+
+  &:hover {
+    color: black;
+    border-bottom: 1px solid black;
+    margin-top: 1px;
+  }
+}

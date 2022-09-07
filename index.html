@@ -2,15 +2,19 @@
 AFAZERES
 1. Ajeitar texto (melhorar conteúdo e corrigir portugues)
 2. Fazer a página responsiva
-  * Adaptar as dimensoes dos elementos
-  * Criar a barra de navegacao inferior para subir ou descer
+  * Ajeitar a barra de navegacao inferior para subir ou descer
   * Repensar o sistema de cards do portfolio
 3. Melhorar a semântica do HTML com tags descritivas
 4. Ajeitar a estilização (cores, mixins, placeholders...)
 5. Melhorar a orgfanização dos códigos JavaScript
 6. Criar sistema de modal exibindo detalhes do portfólio
+  * Abrir com descrição mais detalhada
+  * Exibir uma galeria de imagens e gifs
 7. Criar filtros para o portfólio
 8. Adicionar campo para blog nativo no website
+9. Adicionar os protótipos do Figma dentro dos cards do portfólio
+10. Fazer otimizações de performance, acessibilidade e SEO
+11. Questão de direitos autorais das imagens
 -->
 
 <!DOCTYPE html>
@@ -36,10 +40,10 @@ AFAZERES
       href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -291,8 +295,11 @@ AFAZERES
       <article class="artigos__post">
         <img
           src="https://i.pinimg.com/originals/38/08/41/3808416ffb2c432735bbfcf2cd3a72cc.jpg"
+          alt="Ilustração de uma QR Code composto por diversos itens distintos"
+          class="artigos__imagem"
         />
         <div class="artigos__conteudo">
+          <div class="artigos__data">12/12/2012</div>
           <h3 class="artigos__nome">Como funciona um QR Code?</h3>
           <p class="artigos__descricao">
             Etiam metus urna, commodo at mi ac, lobortis euismod tortor. Nulla
@@ -300,15 +307,17 @@ AFAZERES
             lacus, rutrum id rhoncus at, pellentesque et sapien. Pellentesque
             metus mi, auctor vitae convallis egestas, pulvinar vitae eros.
           </p>
-          <span class="artigos__data">12/12/2012</span>
           <span class="artigos__tag">Medium</span>
         </div>
       </article>
       <article class="artigos__post">
         <img
           src="https://res.cloudinary.com/practicaldev/image/fetch/s--VavnkOO1--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/sxz87xpo2lgkt63zdrlx.jpg"
+          alt="Icone do markdown sobre um fundo sofisticado"
+          class="artigos__imagem"
         />
         <div class="artigos__conteudo">
+          <div class="artigos__data">12/12/2012</div>
           <h3 class="artigos__nome">Mas afinal, o que é o markdown?</h3>
           <p class="artigos__descricao">
             Etiam metus urna, commodo at mi ac, lobortis euismod tortor. Nulla
@@ -316,7 +325,6 @@ AFAZERES
             lacus, rutrum id rhoncus at, pellentesque et sapien. Pellentesque
             metus mi, auctor vitae convallis egestas, pulvinar vitae eros.
           </p>
-          <span class="artigos__data">12/12/2012</span>
           <span class="artigos__tag">LinkedIn</span>
         </div>
       </article>
@@ -325,7 +333,7 @@ AFAZERES
     <section id="curriculo" class="curriculo">
       <h2 class="curriculo__titulo">Currículo</h2>
       <div class="curriculo__borda">
-        <ul class="curriculo__container">
+        <ul class="curriculo__cards">
           <li class="curriculo__card">
             <div class="curriculo__bolinha"></div>
             <div class="curriculo__conteudo">

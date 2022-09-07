@@ -1,10 +1,8 @@
 .portfolio {
-  margin: 6vh 5vw 10vh;
+  @extend %secao;
 
   &__titulo {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #4f4f4f;
+    @extend %titulo-secao
   }
 
   &__cards {
@@ -20,14 +18,11 @@
 
   &__card {
     &-borda {
+      @include backgroundImage("./assets/background.png");
       height: 32vh;
       border-radius: 10px;
-      background-color: $white;
       box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
-      @include backgroundImage("./assets/background.png");
-      transform-style: preserve-3d;
       transition: 0.2s;
-      position: relative;
 
       @include small() {
         height: 40vh;
@@ -85,7 +80,7 @@
       width: calc(100% - 10px);
       height: calc(100% - 10px);
       display: none;
-      filter: opacity(82%);
+      filter: opacity(86%);
 
       @include small() {
         border-radius: 16px;
@@ -102,14 +97,12 @@
     }
 
     &-titulo {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       margin-bottom: .6rem;
     }
 
     &-descricao {
-      font-size: 1.1rem;
-      color: #2e2e2e;
-      margin-bottom: 1rem;
+      @extend %texto-conteudo;
     }
 
     &-subtitulo {
@@ -119,46 +112,34 @@
     }
 
     &-tag {
-      padding: 0.3rem;
-      margin-right: 0.5rem;
-      border-radius: 3px;
-      display: inline-block;
-      font-size: 0.8rem;
+      @extend %tag;
     }
 
     &-link {
-      text-decoration: none;
-      color: #2e2e2e;
-      margin-right: .6rem;
+      @extend %link;
+      margin-right: .5rem;
     }
   }
 }
 
 .tag-html {
   background-color: lighten($color: #EB6227, $amount: 20);
-  color: black;
 }
 .tag-scss { 
   background-color: lighten($color: #C86095, $amount: 20);
-  color: black;
 }
 .tag-javascript { 
   background-color: lighten($color: #F0DB4F, $amount: 10);
-  color: black;
 }
 .tag-python {
   background-color: lighten($color: #FFC331, $amount: 10);
-  color: black;
 }
 .tag-react {
   background-color: lighten($color: #62DAFC, $amount: 10);
-  color: black;
 }
 .tag-typescript {
   background-color: lighten($color: #007ACC, $amount: 20);
-  color: black;
 }
 .tag-expo {
   background-color: darken($color: #FFFFFF, $amount: 10);
-  color: black;
 }

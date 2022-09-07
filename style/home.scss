@@ -1,11 +1,12 @@
 .home {
   @include backgroundImage("./assets/background.png");
+  @include flexContainer(space-between, center, column);
   width: 100%;
   height: 100vh;
-  @include flexContainer(space-between, center, column);
-  padding: 20vh 12vw 6vh 8vw;
-
+  padding: 15vh 8vw 5vh 8vw;
+  
   @include small() {
+    padding: 20vh 12vw 6vh 8vw;
     width: 96vw;
     height: 86vh;
     margin: 10vh auto;
@@ -17,12 +18,11 @@
   }
 
   &__conteudo {
-    width: 100%;
-    height: 60vh;
     @include flexContainer(space-between, center, column);
+    width: 100%;
+    height: auto;
 
     @include small() {
-      height: auto;
       @include flexContainer(space-between, center, row);
     }
   }
@@ -41,11 +41,13 @@
 
   &__titulo {
     color: $white;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: left;
+    margin-top: 3rem;
 
     @include small() {
       font-size: 2.6rem;
+      margin-top: 0;
     }
   }
 
@@ -60,12 +62,14 @@
   }
 
   &__ilustracao {
-    max-width: 50vw;
-    max-height: 18vh;
+    max-width: 40vw;
+    max-height: 15vh;
+    margin-top: 4rem;
 
     @include small() {
       max-width: 20vw;
       max-height: 30vh;
+      margin-top: 0;
     }
   }
 

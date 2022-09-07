@@ -1,5 +1,5 @@
 .sobre {
-  margin: 6vh 5vw 10vh;
+  @extend %secao;
 
   @include small() {
     @include flexContainer(space-between);
@@ -12,20 +12,15 @@
   }
 
   &__titulo {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #4f4f4f;
+    @extend %titulo-secao;
   }
 
   p {
-    font-size: 1.2rem;
-    text-align: justify;
-    color: rgb(81, 81, 81);
+    @extend %texto-conteudo;
   }
 
   &__insignias {
     &-borda {
-      height: 45vh;
       @include backgroundImage("./assets/background.png");
       border-radius: 20px;
       padding: 3px;
@@ -42,21 +37,34 @@
       height: 100%;
       background-color: $white;
       border-radius: 18px;
-      padding: 1.5rem;
+      padding: 1rem 1rem 2rem 1rem ;
+      
+      @include small() {
+        padding: 2rem;
+      }
     }
 
     &-titulo {
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color: #4f4f4f;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
+      
+      @include small() {
+        font-size: 1.4rem;
+        margin-bottom: 2.5rem;
+      }
     }
 
     &-grid {
       list-style: none;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 25px;
+      
+      @include small() {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
 
       li {
         display: flex;
@@ -68,8 +76,12 @@
       }
 
       img {
-        width: 50px;
+        width: 40px;
         margin-bottom: 10px;
+        
+        @include small() {
+          width: 50px;
+        }
       }
     }
   }

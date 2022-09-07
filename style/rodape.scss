@@ -1,21 +1,27 @@
 .rodape {
   width: 90vw;
-  height: 12vh;
+  height: 15vh;
   margin: 5vh 5vw 0 5vw;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   border-top: 1px solid #cad7da;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-
+  flex-direction: column-reverse;
+  
+  @include small() {
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 2rem;
+    height: 12vh;
+  }
+  
   span {
     font-size: 0.9rem;
     color: #4f4f4f;
   }
 
   a {
-    font-size: 0.9rem;
-    text-decoration: none;
-    color: #4f4f4f;
+    @extend %link;
   }
 }

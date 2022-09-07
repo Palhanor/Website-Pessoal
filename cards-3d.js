@@ -5,7 +5,6 @@ if (screenWidth > 576) {
   VanillaTilt.init(document.querySelector("#home"), {
     max: 1.6,
     speed: 200,
-    reverse: true,
     transition: true,
     glare: true,
     "max-glare": 0.4,
@@ -15,7 +14,6 @@ if (screenWidth > 576) {
   VanillaTilt.init(document.querySelector(".sobre__insignias-borda"), {
     max: 5,
     speed: 200,
-    reverse: true,
     transition: true,
     glare: true,
     "max-glare": 0.7,
@@ -24,40 +22,29 @@ if (screenWidth > 576) {
 
   // CARD DO NOTELY
   VanillaTilt.init(document.querySelector("#notely"), {
-    max: 6,
-    speed: 200,
-    reverse: true,
+    max: 3,
+    speed: 100,
     transition: true,
-    glare: true,
-    "max-glare": 0.4,
   });
 
   // CARD DO QR KEY
   VanillaTilt.init(document.querySelector("#qrkey"), {
-    max: 6,
-    speed: 200,
-    reverse: true,
-    glare: true,
-    "max-glare": 0.4,
+    max: 3,
+    speed: 100,
+    transition: true,
   });
 
   // CARD DO DYNOS
   VanillaTilt.init(document.querySelector("#dynos"), {
-    max: 6,
-    speed: 200,
-    reverse: true,
+    max: 3,
+    speed: 100,
     transition: true,
-    glare: true,
-    "max-glare": 0.4,
   });
 
   // CARD DO WEBSITE PESSOAL
   VanillaTilt.init(document.querySelector("#website"), {
-    max: 6,
-    speed: 200,
-    reverse: true,
+    max: 3,
+    speed: 100,
     transition: true,
-    glare: true,
-    "max-glare": 0.4,
   });
 }
