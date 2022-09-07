@@ -1,16 +1,17 @@
 <!-- 
 AFAZERES
-1. Ajeitar texto (melhorar conteúdo e corrigir portugues)
-2. Repensar o sistema de cards do portfolio
-3. Melhorar a semântica do HTML com tags descritivas
-4. Ajeitar a estilização (cores, mixins, placeholders...)
-5. Melhorar a organização dos códigos JavaScript
-6. Criar sistema de modal exibindo detalhes do portfólio (modelo Netflix)
-7. Criar filtros para o portfólio
-8. Adicionar campo para blog nativo no website
-9. Adicionar os protótipos do Figma dentro dos cards do portfólio
-10. Fazer otimizações de performance, acessibilidade e SEO
-11. Questão de direitos autorais das imagens
+1. Ajeitar o estilo para computadores com pouca altura
+2. Ajeitar texto (melhorar conteúdo e corrigir portugues)
+3. Repensar o sistema de cards do portfolio
+4. Melhorar a semântica do HTML com tags descritivas
+5. Ajeitar a estilização (cores, mixins, placeholders...)
+6. Melhorar a organização dos códigos JavaScript
+7. Criar sistema de modal exibindo detalhes do portfólio (modelo Netflix)
+8. Criar filtros para o portfólio
+9. Adicionar campo para blog nativo no website
+10. Adicionar os protótipos do Figma dentro dos cards do portfólio
+11. Fazer otimizações de performance, acessibilidade e SEO
+12. Questão de direitos autorais das imagens
 -->
 
 <!DOCTYPE html>
@@ -50,15 +51,13 @@ AFAZERES
         <li class="botao-artigos">Artigos</li>
         <li class="botao-curriculo">Curriculo</li>
       </ul>
+      <div class="navbar__subir"></div>
       <picture>
         <source media="(max-width: 576px)" srcset="./assets/logo_branca.png" />
         <source media="(min-width: 576px)" srcset="./assets/logo_preta.png" />
         <img src="./assets/logo_branca.png" alt="Logo" class="navbar__logo" />
       </picture>
-      <div class="navbar__controles controles--removidos">
-        <div class="navbar__subir"></div>
-        <div class="navbar__descer"></div>
-      </div>
+      <div class="navbar__descer"></div>
       <ul class="navbar__contatos">
         <li>
           <a href="https://www.linkedin.com/in/lucaspalhano" target="_blank">

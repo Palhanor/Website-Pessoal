@@ -144,7 +144,7 @@ body {
   background-position: center;
   top: auto;
   bottom: 0;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .navbar--desktop-topo {
   background-image: none;
@@ -180,11 +180,6 @@ body {
   height: 5vh;
   cursor: pointer;
 }
-.navbar__controles {
-  display: none;
-  width: 25vw;
-  justify-content: space-between;
-}
 .navbar__subir {
   width: 30px;
   height: 20px;
@@ -193,6 +188,13 @@ body {
   background-position: center;
   background-size: cover;
   transform: rotate(180deg);
+  display: none;
+}
+.navbar__subir--adicionar {
+  display: block;
+}
+.navbar__subir--remover {
+  display: none;
 }
 .navbar__descer {
   width: 30px;
@@ -201,6 +203,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: none;
+}
+.navbar__descer--adicionar {
+  display: block;
+}
+.navbar__descer--remover {
+  display: none;
 }
 .navbar__contatos {
   width: 30vw;

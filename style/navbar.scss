@@ -26,7 +26,7 @@
       background-position: center;
       top: auto;
       bottom: 0;
-      justify-content: space-between;
+      justify-content: space-around;
     }
   }
 
@@ -66,23 +66,35 @@
     cursor: pointer;
   }
 
-  &__controles {
-    display: none;
-    width: 25vw;
-    justify-content: space-between;
-  }
-
   &__subir {
     width: 30px;
     height: 20px;
     @include backgroundImage("./assets/icones/down.png");
     transform: rotate(180deg);
+    display: none;
+
+    &--adicionar {
+      display: block;
+    }
+
+    &--remover {
+      display: none;
+    }
   }
   
   &__descer {
     width: 30px;
     height: 20px;
     @include backgroundImage("./assets/icones/down.png");
+    display: none;
+
+    &--adicionar {
+      display: block;
+    }
+
+    &--remover {
+      display: none;
+    }
   }
 
   &__contatos {

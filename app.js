@@ -9,7 +9,6 @@ const botaoNavegacaoPortfolio = document.querySelector(".botao-portfolio");
 const botaoNavegacaoArtigos = document.querySelector(".botao-artigos");
 const botaoNavegacaoCurriculo = document.querySelector(".botao-curriculo");
 const iconeRolarParaBaixo = document.querySelector(".home__rolar");
-const controles = document.querySelector(".navbar__controles");
 const controleSubir = document.querySelector(".navbar__subir");
 const controleDescer = document.querySelector(".navbar__descer");
 const logo = document.querySelector(".navbar__logo");
@@ -29,9 +28,9 @@ const posicaoMobile = {
 };
 const posicaoDesktop = {
   sobre: posicaoMobile.sobre - (screenHeight / 10 + 50),
-  portfolio: posicaoMobile.portfolio - (screenHeight / 10 + 50),
-  artigos: posicaoMobile.artigos - (screenHeight / 10 + 50),
-  curriculo: posicaoMobile.curriculo - (screenHeight / 10 + 50),
+  portfolio: posicaoMobile.portfolio - (screenHeight / 10),
+  artigos: posicaoMobile.artigos - (screenHeight / 10),
+  curriculo: posicaoMobile.curriculo - (screenHeight / 10),
 };
 
 // SISTEMA DE SCROLL
@@ -66,20 +65,29 @@ function navegarPara(secao) {
 
 // NAVEGACAO MOBILE
 function deslocarPara(secao) {
+  const paraCima = secao === "cima";
+  const paraBaixo = secao === "baixo";
   const posicaoAtual = window.pageYOffset;
-  if (secao === "cima") {
-    if (posicaoAtual > posicaoMobile.curriculo) navegarPara("curriculo");
-    else if (posicaoAtual > posicaoMobile.artigos) navegarPara("artigos");
-    else if (posicaoAtual > posicaoMobile.portfolio) navegarPara("portfolio");
-    else if (posicaoAtual > posicaoMobile.sobre) navegarPara("sobre");
-    else if (posicaoAtual > 0) navegarPara("home");
-  } else if (secao === "baixo") {
-    if (posicaoAtual < posicaoMobile.sobre - 21) navegarPara("sobre");
-    else if (posicaoAtual < posicaoMobile.portfolio - 21)
-      navegarPara("portfolio");
-    else if (posicaoAtual <= posicaoMobile.artigos - 21) navegarPara("artigos");
-    else if (posicaoAtual <= posicaoMobile.curriculo - 21)
-      navegarPara("curriculo");
+  if (paraCima) {
+    const estaAbaixoDoCurriculo = posicaoAtual > posicaoMobile.curriculo;
+    const estaAbaixoDoArtigos = posicaoAtual > posicaoMobile.artigos;
+    const estaAbaixoDoPortfolio = posicaoAtual > posicaoMobile.portfolio;
+    const estaAbaixoDoSobre = posicaoAtual > posicaoMobile.sobre;
+    const estaAbaixoDoTopo = posicaoAtual > 0;
+    if (estaAbaixoDoCurriculo) navegarPara("curriculo");
+    else if (estaAbaixoDoArtigos) navegarPara("artigos");
+    else if (estaAbaixoDoPortfolio) navegarPara("portfolio");
+    else if (estaAbaixoDoSobre) navegarPara("sobre");
+    else if (estaAbaixoDoTopo) navegarPara("home");
+  } else if (paraBaixo) {
+    const estaAcimaDoSobre = posicaoAtual < posicaoMobile.sobre - 21;
+    const estaAcimaDoPortfolio = posicaoAtual < posicaoMobile.portfolio - 21;
+    const estaAcimaDoArtigos = posicaoAtual < posicaoMobile.artigos - 21;
+    const estaAcimaDoCurriculo = posicaoAtual < posicaoMobile.curriculo - 21;
+    if (estaAcimaDoSobre) navegarPara("sobre");
+    else if (estaAcimaDoPortfolio) navegarPara("portfolio");
+    else if (estaAcimaDoArtigos) navegarPara("artigos");
+    else if (estaAcimaDoCurriculo) navegarPara("curriculo");
   }
 }
 
@@ -107,29 +115,33 @@ function corNavegacao() {
   const navbarNaBase = window.pageYOffset > screenHeight / 10;
   if (ehDesktop) {
     if (topoDaPagina) {
-      barraNavegacao.classList.remove('navbar--desktop-home');
-      barraNavegacao.classList.remove('navbar--desktop-inferior');
-      barraNavegacao.classList.add('navbar--desktop-topo');
+      barraNavegacao.classList.remove("navbar--desktop-home");
+      barraNavegacao.classList.remove("navbar--desktop-inferior");
+      barraNavegacao.classList.add("navbar--desktop-topo");
     } else if (dentroDaHome) {
-      barraNavegacao.classList.remove('navbar--desktop-topo');
-      barraNavegacao.classList.remove('navbar--desktop-inferior');
-      barraNavegacao.classList.add('navbar--desktop-home');
+      barraNavegacao.classList.remove("navbar--desktop-topo");
+      barraNavegacao.classList.remove("navbar--desktop-inferior");
+      barraNavegacao.classList.add("navbar--desktop-home");
     } else if (saiuDaHome) {
-      barraNavegacao.classList.remove('navbar--desktop-topo');
-      barraNavegacao.classList.remove('navbar--desktop-home');
-      barraNavegacao.classList.add('navbar--desktop-inferior');
+      barraNavegacao.classList.remove("navbar--desktop-topo");
+      barraNavegacao.classList.remove("navbar--desktop-home");
+      barraNavegacao.classList.add("navbar--desktop-inferior");
     }
   } else if (!ehDesktop) {
     if (navbarNoTopo) {
-      controles.classList.remove('adiciona-controles');
-      controles.classList.add('remove-controles');
-      barraNavegacao.classList.remove('navbar--mobile-base');
-      barraNavegacao.classList.add('navbar--mobile-topo');
+      controleSubir.classList.remove("navbar__subir--adicionar");
+      controleDescer.classList.remove("navbar__descer--adicionar");
+      barraNavegacao.classList.remove("navbar--mobile-base");
+      controleSubir.classList.add("navbar__subir--remover");
+      controleDescer.classList.add("navbar__descer--remover");
+      barraNavegacao.classList.add("navbar--mobile-topo");
     } else if (navbarNaBase) {
-      controles.classList.remove('remove-controles');
-      controles.classList.add('adiciona-controles');
-      barraNavegacao.classList.remove('navbar--mobile-topo')
-      barraNavegacao.classList.add('navbar--mobile-base')
+      controleSubir.classList.remove("navbar__subir--remover");
+      controleDescer.classList.remove("navbar__descer--remover");
+      barraNavegacao.classList.remove("navbar--mobile-topo");
+      controleSubir.classList.add("navbar__subir--adicionar");
+      controleDescer.classList.add("navbar__descer--adicionar");
+      barraNavegacao.classList.add("navbar--mobile-base");
     }
   }
 }
