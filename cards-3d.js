@@ -1,6 +1,6 @@
 let screenWidth = window.innerWidth;
 
-if (screenWidth > 576) {
+if (screenWidth >= 1280) {
   // CARD DA HOME
   VanillaTilt.init(document.querySelector("#home"), {
     max: 1.6,

@@ -1,12 +1,12 @@
 .sobre {
   @extend %secao;
 
-  @include small() {
+  @include laptop() {
     @include flexContainer(space-between);
   }
 
   &__texto {
-    @include small() {
+    @include laptop() {
       width: 60%;
     }
   }
@@ -27,7 +27,7 @@
       box-shadow: 3px 3px 39px rgba(0, 0, 0, 0.03);
       margin-top: 3rem;
 
-      @include small() {
+      @include laptop() {
         width: 30%;
         margin-right: 3rem;
       }
@@ -38,8 +38,12 @@
       background-color: $white;
       border-radius: 18px;
       padding: 1rem 1rem 2rem 1rem ;
+
+      @include tablet() {
+        padding: 2rem 2rem 3rem 3rem;
+      }
       
-      @include small() {
+      @include laptop() {
         padding: 2rem;
       }
     }
@@ -49,8 +53,8 @@
       font-size: 1.2rem;
       color: #4f4f4f;
       margin-bottom: 1.5rem;
-      
-      @include small() {
+
+      @include tablet() {
         font-size: 1.4rem;
         margin-bottom: 2.5rem;
       }
@@ -62,7 +66,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       gap: 25px;
       
-      @include small() {
+      @include tablet() {
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
 
@@ -73,13 +77,25 @@
         font-weight: 600;
         color: #6d6d6d;
         font-size: 0.6rem;
+        
+        @include tablet() {
+          font-size: 0.9rem;
+        }
+        
+        @include laptop() {
+          font-size: 0.6rem;
+        }
       }
 
       img {
         width: 40px;
         margin-bottom: 10px;
+
+        @include tablet() {
+          width: 60px;
+        }
         
-        @include small() {
+        @include laptop() {
           width: 50px;
         }
       }

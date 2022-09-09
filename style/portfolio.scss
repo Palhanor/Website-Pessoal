@@ -11,7 +11,7 @@
     display: grid;
     gap: 2rem;
 
-    @include small() {
+    @include laptop() {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -24,8 +24,8 @@
       box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
       transition: 0.2s;
 
-      @include small() {
-        height: 40vh;
+      @include laptop() {
+        height: 50vh;
         border-radius: 20px;
       }
 
@@ -51,7 +51,7 @@
       border-radius: 7px;
       display: block;
 
-      @include small() {
+      @include laptop() {
         border-radius: 16px;
       }
 
@@ -82,7 +82,7 @@
       display: none;
       filter: opacity(86%);
 
-      @include small() {
+      @include laptop() {
         border-radius: 16px;
       }
     }

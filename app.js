@@ -1,5 +1,5 @@
 // CONSTANTES
-const BREAKPOINT = 576;
+const BREAKPOINT = 1280;
 
 // ACESSO AO DOM
 const barraNavegacao = document.querySelector(".navbar");
@@ -28,14 +28,14 @@ const posicaoMobile = {
 };
 const posicaoDesktop = {
   sobre: posicaoMobile.sobre - (screenHeight / 10 + 50),
-  portfolio: posicaoMobile.portfolio - (screenHeight / 10),
-  artigos: posicaoMobile.artigos - (screenHeight / 10),
-  curriculo: posicaoMobile.curriculo - (screenHeight / 10),
+  portfolio: posicaoMobile.portfolio - screenHeight / 10,
+  artigos: posicaoMobile.artigos - screenHeight / 10,
+  curriculo: posicaoMobile.curriculo - screenHeight / 10,
 };
 
 // SISTEMA DE SCROLL
 function navegarPara(secao) {
-  const ehDesktop = screenWidth > BREAKPOINT;
+  const ehDesktop = screenWidth >= BREAKPOINT;
   switch (secao) {
     case "home":
       window.scrollTo(0, 0);
@@ -107,7 +107,7 @@ controleDescer.addEventListener("click", () => deslocarPara("baixo"));
 
 // MANIPULACAO DA NAVBAR COM SCOLL DESKTOP E MOBILE
 function corNavegacao() {
-  const ehDesktop = screenWidth > BREAKPOINT;
+  const ehDesktop = screenWidth >= BREAKPOINT;
   const topoDaPagina = window.pageYOffset == 0;
   const dentroDaHome = window.pageYOffset < posicaoDesktop.sobre;
   const saiuDaHome = window.pageYOffset >= posicaoDesktop.sobre;

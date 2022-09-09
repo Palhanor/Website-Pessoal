@@ -7,7 +7,7 @@
   z-index: 5;
   width: 100%;
   
-  @include small() {
+  @include laptop() {
     @include flexContainer(space-between, center);
     padding: 0 3rem;
   }
@@ -27,6 +27,10 @@
       top: auto;
       bottom: 0;
       justify-content: space-around;
+        .navbar__logo {
+          margin-top: 0;
+          height: 5vh;
+        }
     }
   }
 
@@ -51,7 +55,7 @@
     list-style: none;
     display: none;
 
-    @include small() {
+    @include laptop() {
       @include flexContainer(space-around);
     }
 
@@ -62,8 +66,14 @@
   }
 
   &__logo {
-    height: 5vh;
+    height: 7vh;
+    margin-top: 3rem;
     cursor: pointer;
+
+    @include laptop() {
+      margin-top: 0;
+      height: 5vh;
+    }
   }
 
   &__subir {
@@ -102,7 +112,7 @@
     list-style: none;
     display: none;
 
-    @include small() {
+    @include laptop() {
       @include flexContainer(flex-end);
     }
 
@@ -112,12 +122,4 @@
       margin-left: 1.5rem;
     }
   }
-}
-
-.remove-controles {
-  display: none;
-}
-
-.adiciona-controles {
-  display: flex;
 }

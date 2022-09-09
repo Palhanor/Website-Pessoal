@@ -8,18 +8,26 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column-reverse;
-  
-  @include small() {
+
+  @include tablet() {
     justify-content: space-between;
-    margin: 5vh 5vw 0 5vw;
     flex-direction: row;
     padding: 0 2rem;
+    height: 10vh;
+  }
+  
+  @include laptop() {
+    margin: 5vh 5vw 0 5vw;
     height: 12vh;
   }
   
   span {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #4f4f4f;
+
+    @include tablet() {
+      font-size: 0.9rem;
+    }
   }
 
   a {

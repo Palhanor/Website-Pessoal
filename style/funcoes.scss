@@ -8,36 +8,31 @@
   background-size: cover;
 }
 
-@mixin flexContainer($justify: flex-start, $align: stretch, $direction: "row") {
+@mixin flexContainer($justify: flex-start, $align: stretch, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
 }
 
-%tag {
-  padding: 0.3rem;
-  margin-right: 0.5rem;
-  border-radius: 3px;
-  display: inline-block;
-  font-size: 0.8rem;
-}
-
 %secao {
-  margin: 6vh 7vw 10vh;
+  margin: 6vh 7vw 12vh;
 
-  @include small() {
+  @include laptop() {
     margin: 6vh 5vw 10vh;
   }
 }
 
 %titulo-secao {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #2d2d2d;
 
-  @include small() {
+  @include tablet() {
     font-size: 1.8rem;
+  }
+
+  @include laptop() {
     margin-bottom: 1.5rem;
   }
 }
@@ -46,8 +41,12 @@
   font-size: 1rem;
   color: #4f4f4f;
   margin-bottom: 0.6rem;
+
+  @include tablet() {
+    font-size: 1.3rem;
+  }
   
-  @include small() {
+  @include laptop() {
     font-size: 1.2rem;
     margin-bottom: 0.4rem;
 
@@ -56,44 +55,68 @@
 
 %texto-conteudo {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #303030;
-  line-height: 28px;
+  line-height: 30px;
+
+  @include tablet() {
+    font-size: 1.3rem;
+  }
   
-  @include small() {
+  @include laptop() {
     font-size: 1.2rem;
   }
 }
 
 %texto-descricao {
   display: none;
-  color: #6d6d6d;
-  margin-bottom: .5rem;
-
-  @include small() {
+  
+  @include laptop() {
     display: block;
+    color: #6d6d6d;
+    margin-bottom: .5rem;
   }
 }
 
 %data {
   color: #8b8b8b;
-  margin: 0.2rem 0 .4rem;
+  margin: 0 0 0.5rem;
   font-size: .8rem;
+
+  @include tablet() {
+    font-size: .9rem;
+  }
   
-  @include small() {
+  @include laptop() {
     margin: 0.4rem 0;
     font-size: .85rem;
   }
 }
 
 %link {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-decoration: none;
   color: #4f4f4f;
-
+  
   &:hover {
     color: black;
     border-bottom: 1px solid black;
     margin-top: 1px;
+  }
+
+  @include tablet() {
+    font-size: 0.9rem;
+  }
+}
+
+%tag {
+  padding: 0.3rem;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 0.7rem;
+
+  @include tablet() {
+    font-size: 0.8rem;
   }
 }
