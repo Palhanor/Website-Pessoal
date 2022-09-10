@@ -157,7 +157,13 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    height: 12vh;
     padding: 0 3rem;
+  }
+}
+@media (min-width: 1920px) {
+  .navbar {
+    height: 10vh;
   }
 }
 .navbar--mobile-topo {
@@ -206,8 +212,13 @@ body {
   }
 }
 .navbar__secoes li {
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
+}
+@media (min-width: 1920px) {
+  .navbar__secoes li {
+    font-size: 1.2rem;
+  }
 }
 .navbar__logo {
   height: 7vh;
@@ -268,6 +279,24 @@ body {
   font-size: 1.2rem;
   cursor: pointer;
   margin-left: 1.5rem;
+  height: 35px;
+}
+@media (min-width: 1920px) {
+  .navbar__contatos li {
+    height: 40px;
+    margin-left: 2rem;
+  }
+}
+
+.icone-contatos {
+  height: 35px;
+  width: 35px;
+}
+@media (min-width: 1920px) {
+  .icone-contatos {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .home {
@@ -285,13 +314,21 @@ body {
 }
 @media (min-width: 1280px) {
   .home {
+    padding: 18vh 12vw 6vh 8vw;
+    width: 95vw;
+    height: 83vh;
+    margin: 12vh auto;
+    border-radius: 25px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+}
+@media (min-width: 1920px) {
+  .home {
     padding: 20vh 12vw 6vh 8vw;
     width: 96vw;
     height: 86vh;
     margin: 10vh auto;
-    border-radius: 25px;
-    transform-style: preserve-3d;
-    cursor: pointer;
   }
 }
 .home__conteudo {
@@ -344,8 +381,14 @@ body {
 }
 @media (min-width: 1280px) {
   .home__titulo {
+    font-size: 2.2rem;
     margin-top: 3rem;
     margin-top: 0;
+  }
+}
+@media (min-width: 1920px) {
+  .home__titulo {
+    font-size: 2.6rem;
   }
 }
 .home__subtitulo {
@@ -360,7 +403,13 @@ body {
 }
 @media (min-width: 1280px) {
   .home__subtitulo {
+    font-size: 1.4rem;
     margin-top: 1.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  .home__subtitulo {
+    font-size: 1.8rem;
   }
 }
 .home__ilustracao {
@@ -368,6 +417,12 @@ body {
   max-height: 15vh;
 }
 @media (min-width: 1280px) {
+  .home__ilustracao {
+    max-width: 15vw;
+    max-height: 25vh;
+  }
+}
+@media (min-width: 1920px) {
   .home__ilustracao {
     max-width: 20vw;
     max-height: 30vh;
@@ -380,6 +435,18 @@ body {
   background-size: cover;
   height: 30px;
   width: 50px;
+}
+@media (min-width: 1280px) {
+  .home__rolar {
+    height: 25px;
+    width: 40px;
+  }
+}
+@media (min-width: 1920px) {
+  .home__rolar {
+    height: 30px;
+    width: 50px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -409,6 +476,12 @@ body {
   .sobre__insignias-borda {
     width: 30%;
     margin-right: 3rem;
+    max-height: 20rem;
+  }
+}
+@media (min-width: 1920px) {
+  .sobre__insignias-borda {
+    max-height: 30rem;
   }
 }
 .sobre__insignias-conteudo {
@@ -423,6 +496,11 @@ body {
   }
 }
 @media (min-width: 1280px) {
+  .sobre__insignias-conteudo {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1920px) {
   .sobre__insignias-conteudo {
     padding: 2rem;
   }
@@ -439,6 +517,16 @@ body {
     margin-bottom: 2.5rem;
   }
 }
+@media (min-width: 1280px) {
+  .sobre__insignias-titulo {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  .sobre__insignias-titulo {
+    margin-bottom: 2.5rem;
+  }
+}
 .sobre__insignias-grid {
   list-style: none;
   display: grid;
@@ -450,6 +538,11 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+@media (min-width: 1280px) {
+  .sobre__insignias-grid {
+    gap: 15px;
+  }
+}
 .sobre__insignias-grid li {
   display: flex;
   flex-flow: column-reverse;
@@ -457,6 +550,7 @@ body {
   font-weight: 600;
   color: #6d6d6d;
   font-size: 0.6rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .sobre__insignias-grid li {
@@ -465,7 +559,7 @@ body {
 }
 @media (min-width: 1280px) {
   .sobre__insignias-grid li {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
 }
 .sobre__insignias-grid img {
@@ -478,6 +572,11 @@ body {
   }
 }
 @media (min-width: 1280px) {
+  .sobre__insignias-grid img {
+    width: 40px;
+  }
+}
+@media (min-width: 1920px) {
   .sobre__insignias-grid img {
     width: 50px;
   }
@@ -506,8 +605,13 @@ body {
 }
 @media (min-width: 1280px) {
   .portfolio__card-borda {
-    height: 50vh;
+    height: 62vh;
     border-radius: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  .portfolio__card-borda {
+    height: 40vh;
   }
 }
 .portfolio__card-borda:hover {
@@ -636,8 +740,13 @@ body {
     align-items: stretch;
     flex-direction: row;
     transition: 0.2s;
-    max-height: 25vh;
+    max-height: 35vh;
     margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  .artigos__post {
+    max-height: 20vh;
   }
 }
 .artigos__post:hover {
@@ -667,6 +776,11 @@ body {
 @media (min-width: 1280px) {
   .artigos__conteudo {
     width: 70%;
+    padding: 1rem 2rem 1rem 1.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  .artigos__conteudo {
     padding: 1.5rem 3rem 1.5rem 2rem;
   }
 }

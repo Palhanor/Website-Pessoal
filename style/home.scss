@@ -6,13 +6,20 @@
   padding: 15vh 8vw 5vh 8vw;
   
   @include laptop() {
+    padding: 18vh 12vw 6vh 8vw;
+    width: 95vw;
+    height: 83vh;
+    margin: 12vh auto;
+    border-radius: 25px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  @include desktop() {
     padding: 20vh 12vw 6vh 8vw;
     width: 96vw;
     height: 86vh;
     margin: 10vh auto;
-    border-radius: 25px;
-    transform-style: preserve-3d;
-    cursor: pointer;
   }
 
   &__conteudo {
@@ -53,8 +60,13 @@
     }
     
     @include laptop() {
+      font-size: 2.2rem;
       margin-top: 3rem;
       margin-top: 0;
+    }
+    
+    @include desktop() {
+      font-size: 2.6rem;
     }
   }
 
@@ -68,7 +80,12 @@
     }
     
     @include laptop() {
+      font-size: 1.4rem;
       margin-top: 1.5rem;
+    }
+    
+    @include desktop() {
+      font-size: 1.8rem;
     }
   }
 
@@ -77,6 +94,11 @@
     max-height: 15vh;
 
     @include laptop() {
+      max-width: 15vw;
+      max-height: 25vh;
+    }
+
+    @include desktop() {
       max-width: 20vw;
       max-height: 30vh;
     }
@@ -86,5 +108,15 @@
     @include backgroundImage("./assets/icones/down.png");
     height: 30px;
     width: 50px;
+    
+    @include laptop() {
+      height: 25px;
+      width: 40px;
+    }
+    
+    @include desktop() {
+      height: 30px;
+      width: 50px;
+    }
   }
 }

@@ -9,7 +9,12 @@
   
   @include laptop() {
     @include flexContainer(space-between, center);
+    height: 12vh;
     padding: 0 3rem;
+  }
+
+  @include desktop() {
+    height: 10vh;
   }
 
   &--mobile {
@@ -60,8 +65,12 @@
     }
 
     li {
-      font-size: 1.2rem;
+      font-size: 1rem;
       cursor: pointer;
+      
+      @include desktop() {
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -120,6 +129,22 @@
       font-size: 1.2rem;
       cursor: pointer;
       margin-left: 1.5rem;
+      height: 35px;
+      
+      @include desktop() {
+        height: 40px;
+        margin-left: 2rem;
+      }
     }
+  }
+}
+
+.icone-contatos {
+  height: 35px;
+  width: 35px;
+  
+  @include desktop() {
+    height: 40px;
+    width: 40px;
   }
 }

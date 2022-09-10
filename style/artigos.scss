@@ -14,8 +14,13 @@
     @include laptop() {
       @include flexContainer(space-between);
       transition: 0.2s;
-      max-height: 25vh;
+      max-height: 35vh;
       margin-bottom: 1.5rem;
+    }
+    
+    @include desktop() {
+      max-height: 20vh;
+
     }
 
     &:hover {
@@ -45,6 +50,10 @@
     
     @include laptop() {
       width: 70%;
+      padding: 1rem 2rem 1rem 1.5rem;
+    }
+    
+    @include desktop() {
       padding: 1.5rem 3rem 1.5rem 2rem;
     }
   }
