@@ -6,7 +6,7 @@ const barraNavegacao = document.querySelector(".navbar");
 const botaoNavegacaoHome = document.querySelector(".navbar__logo");
 const botaoNavegacaoSobre = document.querySelector(".botao-sobre");
 const botaoNavegacaoPortfolio = document.querySelector(".botao-portfolio");
-const botaoNavegacaoArtigos = document.querySelector(".botao-artigos");
+// const botaoNavegacaoArtigos = document.querySelector(".botao-artigos");
 const botaoNavegacaoCurriculo = document.querySelector(".botao-curriculo");
 const iconeRolarParaBaixo = document.querySelector(".home__rolar");
 const controleSubir = document.querySelector(".navbar__subir");
@@ -17,19 +17,19 @@ const iconeContatos = document.querySelectorAll(".icone-contatos");
 // PONTOS DA PAGINA
 const campoSobre = document.querySelector(".sobre__titulo");
 const campoPortfolio = document.querySelector(".portfolio__titulo");
-const campoArtigos = document.querySelector(".artigos__titulo");
+// const campoArtigos = document.querySelector(".artigos__titulo");
 const campoCurriculo = document.querySelector(".curriculo__titulo");
 const screenHeight = window.innerHeight;
 const posicaoMobile = {
   sobre: window.pageYOffset + campoSobre.getBoundingClientRect().top,
   portfolio: window.pageYOffset + campoPortfolio.getBoundingClientRect().top,
-  artigos: window.pageYOffset + campoArtigos.getBoundingClientRect().top,
+  // artigos: window.pageYOffset + campoArtigos.getBoundingClientRect().top,
   curriculo: window.pageYOffset + campoCurriculo.getBoundingClientRect().top,
 };
 const posicaoDesktop = {
   sobre: posicaoMobile.sobre - (screenHeight / 10 + 50),
   portfolio: posicaoMobile.portfolio - screenHeight / 10,
-  artigos: posicaoMobile.artigos - screenHeight / 10,
+  // artigos: posicaoMobile.artigos - screenHeight / 10,
   curriculo: posicaoMobile.curriculo - screenHeight / 10,
 };
 
@@ -50,11 +50,11 @@ function navegarPara(secao) {
         ? window.scrollTo(0, posicaoDesktop.portfolio + 10)
         : window.scrollTo(0, posicaoMobile.portfolio - 20);
       break;
-    case "artigos":
-      ehDesktop
-        ? window.scrollTo(0, posicaoDesktop.artigos + 10)
-        : window.scrollTo(0, posicaoMobile.artigos - 20);
-      break;
+    // case "artigos":
+    //   ehDesktop
+    //     ? window.scrollTo(0, posicaoDesktop.artigos + 10)
+    //     : window.scrollTo(0, posicaoMobile.artigos - 20);
+    //   break;
     case "curriculo":
       ehDesktop
         ? window.scrollTo(0, posicaoDesktop.curriculo + 10)
@@ -70,23 +70,23 @@ function deslocarPara(secao) {
   const posicaoAtual = window.pageYOffset;
   if (paraCima) {
     const estaAbaixoDoCurriculo = posicaoAtual > posicaoMobile.curriculo;
-    const estaAbaixoDoArtigos = posicaoAtual > posicaoMobile.artigos;
+    // const estaAbaixoDoArtigos = posicaoAtual > posicaoMobile.artigos;
     const estaAbaixoDoPortfolio = posicaoAtual > posicaoMobile.portfolio;
     const estaAbaixoDoSobre = posicaoAtual > posicaoMobile.sobre;
     const estaAbaixoDoTopo = posicaoAtual > 0;
     if (estaAbaixoDoCurriculo) navegarPara("curriculo");
-    else if (estaAbaixoDoArtigos) navegarPara("artigos");
+    // else if (estaAbaixoDoArtigos) navegarPara("artigos");
     else if (estaAbaixoDoPortfolio) navegarPara("portfolio");
     else if (estaAbaixoDoSobre) navegarPara("sobre");
     else if (estaAbaixoDoTopo) navegarPara("home");
   } else if (paraBaixo) {
     const estaAcimaDoSobre = posicaoAtual < posicaoMobile.sobre - 21;
     const estaAcimaDoPortfolio = posicaoAtual < posicaoMobile.portfolio - 21;
-    const estaAcimaDoArtigos = posicaoAtual < posicaoMobile.artigos - 21;
+    // const estaAcimaDoArtigos = posicaoAtual < posicaoMobile.artigos - 21;
     const estaAcimaDoCurriculo = posicaoAtual < posicaoMobile.curriculo - 21;
     if (estaAcimaDoSobre) navegarPara("sobre");
     else if (estaAcimaDoPortfolio) navegarPara("portfolio");
-    else if (estaAcimaDoArtigos) navegarPara("artigos");
+    // else if (estaAcimaDoArtigos) navegarPara("artigos");
     else if (estaAcimaDoCurriculo) navegarPara("curriculo");
   }
 }
@@ -98,7 +98,7 @@ iconeRolarParaBaixo.addEventListener("click", () => navegarPara("sobre"));
 botaoNavegacaoPortfolio.addEventListener("click", () =>
   navegarPara("portfolio")
 );
-botaoNavegacaoArtigos.addEventListener("click", () => navegarPara("artigos"));
+// botaoNavegacaoArtigos.addEventListener("click", () => navegarPara("artigos"));
 botaoNavegacaoCurriculo.addEventListener("click", () =>
   navegarPara("curriculo")
 );

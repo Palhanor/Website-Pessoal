@@ -2,7 +2,7 @@
   @extend %secao;
 
   &__titulo {
-    @extend %titulo-secao
+    @extend %titulo-secao;
   }
 
   &__cards {
@@ -28,7 +28,7 @@
         height: 62vh;
         border-radius: 20px;
       }
-      
+
       @include desktop() {
         height: 40vh;
       }
@@ -74,9 +74,7 @@
     }
 
     &-tela {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include positioning(absolute, $top: 50%, $left: 50%);
       transform: translate(-50%, -50%);
       height: 100%;
       border-radius: 7px;
@@ -92,17 +90,15 @@
     }
 
     &-texto {
+      @include positioning(absolute, $top: 10px, $left: 10px);
       display: none;
-      position: absolute;
-      top: 10px;
-      left: 10px;
       width: calc(100% - 20px);
       padding: 1.5rem;
     }
 
     &-titulo {
       font-size: 1.4rem;
-      margin-bottom: .6rem;
+      margin-bottom: 0.6rem;
     }
 
     &-descricao {
@@ -110,9 +106,9 @@
     }
 
     &-subtitulo {
-      color: #2e2e2e;
+      color: $cinzaEscuro;
       margin-top: 1rem;
-      margin-bottom: .4rem;
+      margin-bottom: 0.4rem;
     }
 
     &-tag {
@@ -121,29 +117,29 @@
 
     &-link {
       @extend %link;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 }
 
 .tag-html {
-  background-color: lighten($color: #EB6227, $amount: 20);
+  background-color: lighten($color: $temaHTML, $amount: 20);
 }
-.tag-scss { 
-  background-color: lighten($color: #C86095, $amount: 20);
+.tag-scss {
+  background-color: lighten($color: $temaSCSS, $amount: 20);
 }
-.tag-javascript { 
-  background-color: lighten($color: #F0DB4F, $amount: 10);
+.tag-javascript {
+  background-color: lighten($color: $temaJavascript, $amount: 10);
 }
 .tag-python {
-  background-color: lighten($color: #FFC331, $amount: 10);
+  background-color: lighten($color: $temaPython, $amount: 10);
 }
 .tag-react {
-  background-color: lighten($color: #62DAFC, $amount: 10);
+  background-color: lighten($color: $temaReact, $amount: 10);
 }
 .tag-typescript {
-  background-color: lighten($color: #007ACC, $amount: 20);
+  background-color: lighten($color: $temaTypescript, $amount: 20);
 }
 .tag-expo {
-  background-color: darken($color: #FFFFFF, $amount: 10);
+  background-color: darken($color: $white, $amount: 10);
 }

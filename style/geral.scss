@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Proza Libre", sans-serif;
-  // font-family: "Share Tech Mono", monospace;
   scroll-behavior: smooth;
 }
 
@@ -21,10 +20,10 @@ body {
   }
 
   &-thumb {
-    background: rgb(172, 172, 172);
+    background: $cinzaMediano;
 
     &:hover {
-      background: rgb(119, 119, 119);
+      background: $cinzaSemiEscuro;
     }
   }
 }

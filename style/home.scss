@@ -4,7 +4,7 @@
   width: 100%;
   height: 100vh;
   padding: 15vh 8vw 5vh 8vw;
-  
+
   @include laptop() {
     padding: 18vh 12vw 6vh 8vw;
     width: 95vw;
@@ -14,7 +14,7 @@
     transform-style: preserve-3d;
     cursor: pointer;
   }
-  
+
   @include desktop() {
     padding: 20vh 12vw 6vh 8vw;
     width: 96vw;
@@ -38,11 +38,11 @@
     padding: 2.5rem 0 5rem;
     transform-style: preserve-3d;
     @include flexContainer(center, flex-start, column);
-    
+
     @include tablet() {
       padding: 5rem 0 8rem;
     }
-    
+
     @include laptop() {
       padding: 3rem;
       height: 40vh;
@@ -58,13 +58,13 @@
     @include tablet() {
       font-size: 2.6rem;
     }
-    
+
     @include laptop() {
       font-size: 2.2rem;
       margin-top: 3rem;
       margin-top: 0;
     }
-    
+
     @include desktop() {
       font-size: 2.6rem;
     }
@@ -78,12 +78,12 @@
     @include tablet() {
       font-size: 1.8rem;
     }
-    
+
     @include laptop() {
       font-size: 1.4rem;
       margin-top: 1.5rem;
     }
-    
+
     @include desktop() {
       font-size: 1.8rem;
     }
@@ -108,12 +108,12 @@
     @include backgroundImage("./assets/icones/down.png");
     height: 30px;
     width: 50px;
-    
+
     @include laptop() {
       height: 25px;
       width: 40px;
     }
-    
+
     @include desktop() {
       height: 30px;
       width: 50px;

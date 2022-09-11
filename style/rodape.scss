@@ -3,27 +3,23 @@
   height: 15vh;
   margin: 5vh 5vw 10vh 5vw;
   padding: 1rem 2rem;
-  border-top: 1px solid #cad7da;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column-reverse;
+  border-top: 1px solid darken($color: $background, $amount: 10);
+  @include flexContainer(space-around, center, column-reverse);
 
   @include tablet() {
-    justify-content: space-between;
-    flex-direction: row;
+    @include flexContainer(space-between, center, row);
     padding: 0 2rem;
     height: 10vh;
   }
-  
+
   @include laptop() {
     margin: 5vh 5vw 0 5vw;
     height: 12vh;
   }
-  
+
   span {
     font-size: 0.8rem;
-    color: #4f4f4f;
+    color: $cinzaSemiEscuro;
 
     @include tablet() {
       font-size: 0.9rem;

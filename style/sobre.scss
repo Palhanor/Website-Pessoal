@@ -42,12 +42,12 @@
       height: 100%;
       background-color: $white;
       border-radius: 18px;
-      padding: 1rem 1rem 2rem 1rem ;
+      padding: 1rem 1rem 2rem 1rem;
 
       @include tablet() {
         padding: 2rem 2rem 3rem 3rem;
       }
-      
+
       @include laptop() {
         padding: 1rem;
       }
@@ -60,18 +60,18 @@
     &-titulo {
       text-align: center;
       font-size: 1.2rem;
-      color: #4f4f4f;
+      color: $cinzaSemiEscuro;
       margin-bottom: 1.5rem;
 
       @include tablet() {
         font-size: 1.4rem;
         margin-bottom: 2.5rem;
       }
-      
+
       @include laptop() {
         margin-bottom: 1.5rem;
       }
-      
+
       @include desktop() {
         margin-bottom: 2.5rem;
       }
@@ -82,7 +82,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 25px;
-      
+
       @include tablet() {
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
@@ -92,18 +92,17 @@
       }
 
       li {
-        display: flex;
+        @include flexContainer($align: center);
         flex-flow: column-reverse;
-        align-items: center;
         font-weight: 600;
-        color: #6d6d6d;
+        color: $cinzaMediano;
         font-size: 0.6rem;
         text-align: center;
-        
+
         @include tablet() {
           font-size: 0.9rem;
         }
-        
+
         @include laptop() {
           font-size: 0.5rem;
         }
@@ -116,7 +115,7 @@
         @include tablet() {
           width: 60px;
         }
-        
+
         @include laptop() {
           width: 40px;
         }

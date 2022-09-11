@@ -10,17 +10,16 @@
     border-radius: 10px;
     background-color: $white;
     margin-bottom: 1rem;
-    
+
     @include laptop() {
       @include flexContainer(space-between);
       transition: 0.2s;
       max-height: 35vh;
       margin-bottom: 1.5rem;
     }
-    
+
     @include desktop() {
       max-height: 20vh;
-
     }
 
     &:hover {
@@ -47,12 +46,12 @@
     @include tablet() {
       padding: 1.5rem 2rem 1.5rem 1.5rem;
     }
-    
+
     @include laptop() {
       width: 70%;
       padding: 1rem 2rem 1rem 1.5rem;
     }
-    
+
     @include desktop() {
       padding: 1.5rem 3rem 1.5rem 2rem;
     }
@@ -72,7 +71,7 @@
 
   &__tag {
     @extend %tag;
-    color: #000000;
-    background-color: #d1d1d1;
+    color: $black;
+    background-color: $cinzaQuaseClaro;
   }
 }

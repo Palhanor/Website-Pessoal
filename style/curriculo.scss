@@ -21,7 +21,7 @@
     border-radius: 0 10px 10px 0;
     transition: 0.2s;
     &:hover {
-      background-color: #e4eaec;
+      background-color: darken($color: $background, $amount: 4);
     }
   }
 
@@ -31,7 +31,7 @@
     height: 20px;
     border-radius: 20px;
     margin-left: calc(-12px - 1rem);
-    position: relative;
+    @include positioning();
 
     &::after {
       content: "";
@@ -39,10 +39,8 @@
       height: 14px;
       border-radius: 14px;
       background-color: $white;
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      
+      @include positioning(absolute, $top: 3px, $left: 3px);
+
       @include laptop() {
       }
     }
@@ -50,11 +48,11 @@
 
   &__conteudo {
     width: 75vw;
-    
+
     @include tablet() {
       width: 80vw;
     }
-    
+
     @include laptop() {
       width: 85vw;
     }

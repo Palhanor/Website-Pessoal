@@ -1,20 +1,15 @@
 <!-- 
 AFAZERES
-1. Ajeitar a responsividade para laptop e desktop
-2. Melhorar a semântica do HTML com tags descritivas
-3. Ajeitar a estilização (cores, mixins, placeholders...)
-4. Ajeitar textos (conteúdo e portugues)
-5. Fazer otimizações de performance, acessibilidade e SEO
-6. Ajeitar as bolinhas do curriculo
-7. Questão de direitos autorais das imagens
-8. Repensar o sistema de cards do portfolio (mobile)
-9. Criar um campo de mostrar mais onde tem muito texto (deixar expansivel)
+1. Ajeitar textos (conteúdo e portugues)
+2. Fazer otimizações de performance, acessibilidade e SEO (imagens, fonte, minificar, gifs, requests)
 -----------
-10. Criar sistema de modal exibindo detalhes do portfólio (modelo Netflix)
-11. Adicionar campo para blog nativo no website
-12. Criar filtros para o portfólio
-13. Criar um canal de contato direto
-14. Melhorar o Sobre - Linguagens (insignias), frameworks (insignias), ferramentas (insignias), certificados (carrossel) e certificações (carrossel)
+3. Questão de direitos autorais das imagens
+4. Criar um campo de mostrar mais onde tem muito texto (deixar expansivel)
+5. Criar sistema do portfólio no estilo catálogo Netflix para desktop e mobile
+6. Adicionar campo para blog nativo no website
+7. Criar filtros para o portfólio (tags)
+8. Criar um canal de contato direto
+9. Melhorar o Sobre - Linguagens (insignias), frameworks (insignias), ferramentas (insignias), certificados (carrossel) e certificações (carrossel)
 -->
 
 <!DOCTYPE html>
@@ -40,10 +35,6 @@ AFAZERES
       href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -51,7 +42,7 @@ AFAZERES
       <ul class="navbar__secoes">
         <li class="botao-sobre">Sobre</li>
         <li class="botao-portfolio">Portfólio</li>
-        <li class="botao-artigos">Artigos</li>
+        <!-- <li class="botao-artigos">Artigos</li> -->
         <li class="botao-curriculo">Curriculo</li>
       </ul>
       <div class="navbar__subir"></div>
@@ -67,7 +58,6 @@ AFAZERES
             <img
               src="./assets/contatos/linkedin_preto.png"
               alt="Link para o LinkedIn"
-              width="40px"
               class="icone-contatos"
             />
           </a>
@@ -77,7 +67,6 @@ AFAZERES
             <img
               src="./assets/contatos/github_preto.png"
               alt="Link para o Github"
-              width="40px"
               class="icone-contatos"
             />
           </a>
@@ -87,14 +76,14 @@ AFAZERES
             <img
               src="./assets/contatos/behance_preto.png"
               alt="Link para o Behance"
-              width="40px"
               class="icone-contatos"
             />
           </a>
         </li>
       </ul>
     </nav>
-    <div id="home" class="home">
+
+    <section id="home" class="home">
       <div class="home__conteudo">
         <div class="home__texto">
           <h1 class="home__titulo" id="home">Olá, me chamo Lucas Palhano.</h1>
@@ -110,10 +99,10 @@ AFAZERES
         />
       </div>
       <div class="home__rolar" onclick="window.scrollTo(0, 790)"></div>
-    </div>
+    </section>
 
     <section id="sobre" class="sobre">
-      <div class="sobre__texto">
+      <article class="sobre__texto">
         <h2 class="sobre__titulo">Sobre</h2>
         <p>
           Desde muito cedo sempre me interessei por tecnologia e pelo
@@ -128,8 +117,8 @@ AFAZERES
           onde pude atuar na Líderi, Empresa Júnior de RI, e ter contato com
           diversos conteúdos tais como economia, política, e história.
         </p>
-      </div>
-      <div class="sobre__insignias-borda">
+      </article>
+      <aside class="sobre__insignias-borda">
         <div class="sobre__insignias-conteudo">
           <h3 class="sobre__insignias-titulo">Insignias</h3>
           <ul class="sobre__insignias-grid">
@@ -189,7 +178,7 @@ AFAZERES
             </li>
           </ul>
         </div>
-      </div>
+      </aside>
     </section>
 
     <section id="portfolio" class="portfolio">
@@ -308,7 +297,7 @@ AFAZERES
       </ul>
     </section>
 
-    <section id="artigos" class="artigos">
+    <!-- <section id="artigos" class="artigos">
       <h2 class="artigos__titulo">Artigos</h2>
       <article class="artigos__post">
         <img
@@ -346,7 +335,7 @@ AFAZERES
           <span class="artigos__tag">LinkedIn</span>
         </div>
       </article>
-    </section>
+    </section> -->
 
     <section id="curriculo" class="curriculo">
       <h2 class="curriculo__titulo">Currículo</h2>

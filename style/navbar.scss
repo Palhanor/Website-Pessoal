@@ -2,11 +2,10 @@
   height: 10vh;
   padding: 0 2rem;
   @include flexContainer(center, center);
-  position: fixed;
-  top: 0;
+  @include positioning(fixed, $top: 0);
   z-index: 5;
   width: 100%;
-  
+
   @include laptop() {
     @include flexContainer(space-between, center);
     height: 12vh;
@@ -19,55 +18,46 @@
 
   &--mobile {
     &-topo {
-      background-image: none;
-      background-color: transparent;
-      top: 0;
-      bottom: auto;
-      justify-content: center;
+      @include removeBackgroundImage(transparent);
+      @include positioning(fixed, $top: 0);
+      @include flexContainer(center, center);
     }
     &-base {
-      background-image: url('./assets/background.png');
-      background-size: cover;
-      background-position: center;
-      top: auto;
-      bottom: 0;
-      justify-content: space-around;
-        .navbar__logo {
-          margin-top: 0;
-          height: 5vh;
-        }
+      @include backgroundImage("./assets/background.png");
+      @include positioning(fixed, $bottom: 0);
+      @include flexContainer(space-around, center);
+      .navbar__logo {
+        margin-top: 0;
+        height: 5vh;
+      }
     }
   }
 
   &--desktop {
     &-topo {
-      background-image: none;
-      background-color: transparent;
+      @include removeBackgroundImage(transparent);
     }
     &-home {
-      background-image: none;
-      background-color: rgb(241, 245, 246);
+      @include removeBackgroundImage($background);
     }
     &-inferior {
-      background-image: url('./assets/background.png');
-      background-size: cover;
-      background-position: center;
+      @include backgroundImage("./assets/background.png");
     }
   }
 
   &__secoes {
-    width: 30vw;
+    width: 20vw;
     list-style: none;
     display: none;
 
     @include laptop() {
-      @include flexContainer(space-around);
+      @include flexContainer(space-between);
     }
 
     li {
       font-size: 1rem;
       cursor: pointer;
-      
+
       @include desktop() {
         font-size: 1.2rem;
       }
@@ -100,7 +90,7 @@
       display: none;
     }
   }
-  
+
   &__descer {
     width: 30px;
     height: 20px;
@@ -117,7 +107,7 @@
   }
 
   &__contatos {
-    width: 30vw;
+    width: 20vw;
     list-style: none;
     display: none;
 
@@ -130,7 +120,7 @@
       cursor: pointer;
       margin-left: 1.5rem;
       height: 35px;
-      
+
       @include desktop() {
         height: 40px;
         margin-left: 2rem;
@@ -142,7 +132,7 @@
 .icone-contatos {
   height: 35px;
   width: 35px;
-  
+
   @include desktop() {
     height: 40px;
     width: 40px;

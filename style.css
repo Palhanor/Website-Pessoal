@@ -91,8 +91,8 @@
   color: #4f4f4f;
 }
 .rodape a:hover, .portfolio__card-link:hover {
-  color: black;
-  border-bottom: 1px solid black;
+  color: #000000;
+  border-bottom: 1px solid #000000;
   margin-top: 1px;
 }
 @media (min-width: 768px) {
@@ -133,10 +133,10 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #acacac;
+  background: #6d6d6d;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #777777;
+  background: #4f4f4f;
 }
 
 .navbar {
@@ -148,6 +148,9 @@ body {
   flex-direction: row;
   position: fixed;
   top: 0;
+  right: auto;
+  bottom: auto;
+  left: auto;
   z-index: 5;
   width: 100%;
 }
@@ -169,17 +172,30 @@ body {
 .navbar--mobile-topo {
   background-image: none;
   background-color: transparent;
+  position: fixed;
   top: 0;
+  right: auto;
   bottom: auto;
+  left: auto;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .navbar--mobile-base {
   background-image: url("./assets/background.png");
-  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  position: fixed;
   top: auto;
+  right: auto;
   bottom: 0;
+  left: auto;
+  display: flex;
   justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
 .navbar--mobile-base .navbar__logo {
   margin-top: 0;
@@ -195,18 +211,19 @@ body {
 }
 .navbar--desktop-inferior {
   background-image: url("./assets/background.png");
-  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 .navbar__secoes {
-  width: 30vw;
+  width: 20vw;
   list-style: none;
   display: none;
 }
 @media (min-width: 1280px) {
   .navbar__secoes {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: stretch;
     flex-direction: row;
   }
@@ -263,7 +280,7 @@ body {
   display: none;
 }
 .navbar__contatos {
-  width: 30vw;
+  width: 20vw;
   list-style: none;
   display: none;
 }
@@ -545,8 +562,10 @@ body {
 }
 .sobre__insignias-grid li {
   display: flex;
-  flex-flow: column-reverse;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: row;
+  flex-flow: column-reverse;
   font-weight: 600;
   color: #6d6d6d;
   font-size: 0.6rem;
@@ -663,6 +682,8 @@ body {
 .portfolio__card-tela {
   position: absolute;
   top: 50%;
+  right: auto;
+  bottom: auto;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
@@ -679,10 +700,12 @@ body {
   }
 }
 .portfolio__card-texto {
-  display: none;
   position: absolute;
   top: 10px;
+  right: auto;
+  bottom: auto;
   left: 10px;
+  display: none;
   width: calc(100% - 20px);
   padding: 1.5rem;
 }
@@ -691,7 +714,7 @@ body {
   margin-bottom: 0.6rem;
 }
 .portfolio__card-subtitulo {
-  color: #2e2e2e;
+  color: #2d2d2d;
   margin-top: 1rem;
   margin-bottom: 0.4rem;
 }
@@ -810,7 +833,7 @@ body {
   transition: 0.2s;
 }
 .curriculo__card:hover {
-  background-color: #e4eaec;
+  background-color: #e5ecee;
 }
 .curriculo__bolinha {
   background-image: url("./assets/background.png");
@@ -822,6 +845,10 @@ body {
   border-radius: 20px;
   margin-left: calc(-12px - 1rem);
   position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
 }
 .curriculo__bolinha::after {
   content: "";
@@ -831,6 +858,8 @@ body {
   background-color: #ffffff;
   position: absolute;
   top: 3px;
+  right: auto;
+  bottom: auto;
   left: 3px;
 }
 .curriculo__conteudo {
@@ -851,7 +880,7 @@ body {
   height: 15vh;
   margin: 5vh 5vw 10vh 5vw;
   padding: 1rem 2rem;
-  border-top: 1px solid #cad7da;
+  border-top: 1px solid #d2dfe2;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -859,7 +888,9 @@ body {
 }
 @media (min-width: 768px) {
   .rodape {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     padding: 0 2rem;
     height: 10vh;

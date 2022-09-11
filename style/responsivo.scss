@@ -8,7 +8,6 @@ $laptop: 1280px;
 // Padrao - 1920:1080(980)
 $desktop: 1920px;
 
-
 @mixin tablet {
   @media (min-width: $tablet) {
     @content;
