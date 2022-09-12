@@ -46,12 +46,16 @@
   }
 
   &__secoes {
-    width: 20vw;
-    list-style: none;
     display: none;
-
+    
     @include laptop() {
       @include flexContainer(space-between);
+      width: 20vw;
+      list-style: none;
+    }
+    
+    @include desktop(){
+      width: 15vw;
     }
 
     li {
@@ -107,12 +111,16 @@
   }
 
   &__contatos {
-    width: 20vw;
-    list-style: none;
     display: none;
-
+    
     @include laptop() {
+      width: 20vw;
+      list-style: none;
       @include flexContainer(flex-end);
+    }
+
+    @include desktop(){
+      width: 15vw;
     }
 
     li {

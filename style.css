@@ -216,8 +216,6 @@ body {
   background-size: cover;
 }
 .navbar__secoes {
-  width: 20vw;
-  list-style: none;
   display: none;
 }
 @media (min-width: 1280px) {
@@ -226,6 +224,13 @@ body {
     justify-content: space-between;
     align-items: stretch;
     flex-direction: row;
+    width: 20vw;
+    list-style: none;
+  }
+}
+@media (min-width: 1920px) {
+  .navbar__secoes {
+    width: 15vw;
   }
 }
 .navbar__secoes li {
@@ -280,16 +285,21 @@ body {
   display: none;
 }
 .navbar__contatos {
-  width: 20vw;
-  list-style: none;
   display: none;
 }
 @media (min-width: 1280px) {
   .navbar__contatos {
+    width: 20vw;
+    list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
     flex-direction: row;
+  }
+}
+@media (min-width: 1920px) {
+  .navbar__contatos {
+    width: 15vw;
   }
 }
 .navbar__contatos li {

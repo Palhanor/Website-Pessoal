@@ -1,15 +1,15 @@
 <!-- 
 AFAZERES
-1. Ajeitar textos (conteúdo e portugues)
-2. Fazer otimizações de performance, acessibilidade e SEO (imagens, fonte, minificar, gifs, requests)
+1. Fazer otimizações de performance, acessibilidade e SEO (gifs, imagens, minificar, requests)
 -----------
-3. Questão de direitos autorais das imagens
-4. Criar um campo de mostrar mais onde tem muito texto (deixar expansivel)
-5. Criar sistema do portfólio no estilo catálogo Netflix para desktop e mobile
-6. Adicionar campo para blog nativo no website
-7. Criar filtros para o portfólio (tags)
-8. Criar um canal de contato direto
-9. Melhorar o Sobre - Linguagens (insignias), frameworks (insignias), ferramentas (insignias), certificados (carrossel) e certificações (carrossel)
+1. Otimização de imagens (redução de qualidade e dimensões, conversão para webp)
+2. Questão de direitos autorais das imagens
+3. Criar um campo de mostrar mais onde tem muito texto (deixar expansivel)
+4. Criar sistema do portfólio no estilo catálogo Netflix para desktop e mobile
+5. Adicionar campo para blog nativo no website
+6. Criar filtros para o portfólio (tags)
+7. Criar um canal de contato direto pelo website
+8. Melhorar o Sobre - Linguagens (insignias), frameworks (insignias), ferramentas (insignias), certificados (carrossel) e certificações (carrossel)
 -->
 
 <!DOCTYPE html>
@@ -21,20 +21,20 @@ AFAZERES
     <meta name="author" content="Lucas Palhano Fonseca" />
     <meta
       name="keywords"
-      content="Progrmação, Desenvolvedor, HTML, CSS, JavaScript, React"
+      content="Progrmação, Desenvolvedor, Web, Mobile, HTML, CSS, JavaScript, React"
     />
     <meta
       name="description"
       content="Website pessoal contendo informações sobre o desenvolvedor Lucas Palhano"
     />
-    <title>Lucas Palhano</title>
+    <title>Lucas Palhano - Desenvolvedor Web e Mobile</title>
     <link rel="icon" href="./assets/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <style>
+      @font-face {
+        font-family: "Proza Libre";
+        src: url("./assets/font/ProzaLibre-Regular.ttf") format("truetype");
+      }
+    </style>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -43,7 +43,7 @@ AFAZERES
         <li class="botao-sobre">Sobre</li>
         <li class="botao-portfolio">Portfólio</li>
         <!-- <li class="botao-artigos">Artigos</li> -->
-        <li class="botao-curriculo">Curriculo</li>
+        <li class="botao-curriculo">Currículo</li>
       </ul>
       <div class="navbar__subir"></div>
       <picture>
@@ -105,17 +105,19 @@ AFAZERES
       <article class="sobre__texto">
         <h2 class="sobre__titulo">Sobre</h2>
         <p>
-          Desde muito cedo sempre me interessei por tecnologia e pelo
+          Desde muito cedo sempre me interessei por tecnologia e pela
           possibilidade de criar coisas novas que venham a impactar minha
-          comunidade e o mundo. Ao longo de minha jornada, tive a oportunidade
-          de cruzar o caminho da programação por diversas vezes, seja quando fiz
-          minhas primeiras páginas em HTML puro nos idos de 2010 por pura
-          curiosidade, ou quando cursei Eletrônica no IFPB como ensino médio e
-          técnico, com as cansativas aulas de C e Python. Contudo, ao longo dos
-          percalços desta vida, acabei indo cursar Relações Internacionais na
-          Universidade Federal da Paraíba. Foi uma experiência engrandecedora,
-          onde pude atuar na Líderi, Empresa Júnior de RI, e ter contato com
-          diversos conteúdos tais como economia, política, e história.
+          comunidade e o mundo. Ao longo do tempo, tive a oportunidade de cruzar
+          o caminho da programação e desenvolvimento de software por diversas
+          vezes, mas somente agora posso dizer que me encontrei neste área, e
+          desde então tem sido uma jornada incrível.
+        </p>
+        <p>
+          Atualmente sou um estudante de programação, munido de centenas de
+          ideias, dezenas de projetos (sendo realizados em simultâneo) e muita
+          vontade de praticar e aprender. Espero me encontrar dentro deste
+          mercado para então estar contribuindo de forma produtiva para toda a
+          sociedade com todos os meus conhecimentos presentes e futuros.
         </p>
       </article>
       <aside class="sobre__insignias-borda">
@@ -229,7 +231,7 @@ AFAZERES
           <div class="portfolio__card-texto">
             <h3 class="portfolio__card-titulo">QR Key</h3>
             <p class="portfolio__card-descricao">
-              O QR Key tem como intúito de permitir a criação e visualização de
+              O QR Key tem como intuito de permitir a criação e visualização de
               QR Codes privados de forma simples e intuitiva, bastando
               configurar uma senha mestra necessária para sua decodificação.
             </p>
@@ -278,8 +280,8 @@ AFAZERES
             <h3 class="portfolio__card-titulo">Website pessoal</h3>
             <p class="portfolio__card-descricao">
               Website pessoal criado como uma vitrine profissional própria,
-              contendo informações relevantes acerca de minhas motivações,
-              trajetória e projetos realizados ao longo do tempo.
+              contendo informações relevantes acerca de minha trajetória,
+              motivações e projetos realizados ao longo do tempo.
             </p>
             <h4 class="portfolio__card-subtitulo">Tecnologias</h4>
             <span class="portfolio__card-tag tag-html">HTML5</span>
@@ -349,11 +351,13 @@ AFAZERES
                 Análise e Desenvolvimento de sistemas (Cruzeiro do Sul)
               </h3>
               <p class="curriculo__descricao">
-                Etiam metus urna, commodo at mi ac, lobortis euismod tortor.
-                Nulla metus nisi, mattis nec nulla eget, laoreet mollis ex. Duis
-                ligula lacus, rutrum id rhoncus at, pellentesque et sapien.
-                Pellentesque metus mi, auctor vitae convallis egestas, pulvinar
-                vitae eros.
+                Atualmente, tendo em vista a necessidade de formalizar os
+                conhecimentos adquiridos e desenvolvidos na Altura, surgiu a
+                oportunidade de cursar um curso superior tecnólogo na Cruzeiro
+                do Sul. Até então a experiência tem sido extremamente
+                engrandecedora, possibilitando o contato com toda uma nova gama
+                de conhecimentos relevantes para um profissional da área de
+                desenvolvimento de software.
               </p>
             </div>
           </li>
@@ -365,11 +369,12 @@ AFAZERES
                 Curso de programação online (Alura)
               </h3>
               <p class="curriculo__descricao">
-                Etiam metus urna, commodo at mi ac, lobortis euismod tortor.
-                Nulla metus nisi, mattis nec nulla eget, laoreet mollis ex. Duis
-                ligula lacus, rutrum id rhoncus at, pellentesque et sapien.
-                Pellentesque metus mi, auctor vitae convallis egestas, pulvinar
-                vitae eros.
+                Ao fim do curso de Relações Internacionais, e com todo o caos
+                ocasionado pela pandemia, me vi em um período de auto reflexão,
+                o qual me levou a um retorno às origens. Decidido em voltar para
+                a área que sempre me fascinou, resolvi começar a cursar a Alura,
+                onde pude voltar a estudar temas diversos sobre programação,
+                como HTML, CSS, Front-end, React e React Native.
               </p>
             </div>
           </li>
@@ -381,11 +386,13 @@ AFAZERES
                 Estágio em Comércio Exterior (Líderi)
               </h3>
               <p class="curriculo__descricao">
-                Etiam metus urna, commodo at mi ac, lobortis euismod tortor.
-                Nulla metus nisi, mattis nec nulla eget, laoreet mollis ex. Duis
-                ligula lacus, rutrum id rhoncus at, pellentesque et sapien.
-                Pellentesque metus mi, auctor vitae convallis egestas, pulvinar
-                vitae eros.
+                Ainda imerso no contexto da graduação no curso de Relações
+                Internacionais, me deparei com a oportunidade de estagiar na
+                Líderi, a Empresa Júnior de RI. Esta experiência me foi
+                extremamente engrandecedora e gratificante, me possibilitando
+                atuar no setor de venda através do cargo de diretor comercial,
+                onde precisei traçar estratégias e liderar equipes para alcançar
+                as metas de faturamento da empresa.
               </p>
             </div>
           </li>
@@ -397,11 +404,12 @@ AFAZERES
                 Bacharelado em Relações Internacionais (UFPB)
               </h3>
               <p class="curriculo__descricao">
-                Etiam metus urna, commodo at mi ac, lobortis euismod tortor.
-                Nulla metus nisi, mattis nec nulla eget, laoreet mollis ex. Duis
-                ligula lacus, rutrum id rhoncus at, pellentesque et sapien.
-                Pellentesque metus mi, auctor vitae convallis egestas, pulvinar
-                vitae eros.
+                Após o encerramento de um ciclo, me veio a vontade de arriscar
+                algo diferente, com vistas a expandir meus conhecimentos acerca
+                do mundo e sua complexidade. Assim, fui cursar Relações
+                Internacionais na UFPB, onde tive contato com um vasto conteúdo
+                multidisciplinar transpassando temas em economia, política,
+                história e sociologia.
               </p>
             </div>
           </li>
@@ -413,11 +421,12 @@ AFAZERES
                 Curso Técnico de Eletrônica (IFPB)
               </h3>
               <p class="curriculo__descricao">
-                Etiam metus urna, commodo at mi ac, lobortis euismod tortor.
-                Nulla metus nisi, mattis nec nulla eget, laoreet mollis ex. Duis
-                ligula lacus, rutrum id rhoncus at, pellentesque et sapien.
-                Pellentesque metus mi, auctor vitae convallis egestas, pulvinar
-                vitae eros.
+                Desde muito cedo fascinado pelas tecnologias, fui cursar o
+                ensino médio e técnico em Eletrônica no IFPB. Foi lá onde pude
+                ter meus primeiros contatos com disciplinas voltadas para campos
+                de programação e lógica, através de assuntos como programação em
+                C e Python, assim como Circuitos Lógicos e Projetos de
+                Eletrônica Aplicada.
               </p>
             </div>
           </li>
@@ -430,7 +439,7 @@ AFAZERES
       <a href="mailto:lucaspalhanof@gmail.com">lucaspalhanof@gmail.com</a>
     </footer>
 
-    <script type="text/javascript" src="./vanilla-tilt.js"></script>
+    <script type="text/javascript" src="./vanilla-tilt.min.js"></script>
     <script type="text/javascript" src="./cards-3d.js"></script>
     <script type="text/javascript" src="./app.js"></script>
   </body>

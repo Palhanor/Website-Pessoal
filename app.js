@@ -182,14 +182,14 @@ for (let i = 0; i < iconeContatos.length; i++) {
 const ilustracao = document.querySelector(".home__ilustracao");
 let contadorIlustracao = 0;
 const listaIlustracoes = [
-  "https://media0.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif?cid=790b76116ae5338a3995ed13f1488ae515116f3fc7acf45e&rid=giphy.gif&ct=s",
-  "https://media1.giphy.com/media/fsEaZldNC8A1PJ3mwp/giphy.gif?cid=790b761180496511a3750fff8e525be364b5b60a5f1dcbb6&rid=giphy.gif&ct=s",
-  "https://media1.giphy.com/media/ln7z2eWriiQAllfVcn/giphy.gif?cid=790b761131c5daec2251f06f4807cf57b2a5ce25e86464bf&rid=giphy.gif&ct=s",
-  "https://media3.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif?cid=790b7611c47330a71732e8c8d08ae70fd7c3a0584a322f8f&rid=giphy.gif&ct=s",
-  "https://media0.giphy.com/media/IdyAQJVN2kVPNUrojM/giphy.gif?cid=790b7611d7504c6f61801bcc9cc1b0df1a8c89d5e3bd136c&rid=giphy.gif&ct=s",
-  "https://media2.giphy.com/media/kH1DBkPNyZPOk0BxrM/giphy.gif?cid=790b7611fb270f8c30091c5a81824fbbc882f2ea6bc12054&rid=giphy.gif&ct=s",
-  "https://media1.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif?cid=790b761123cbd873da72f344686b0c7cb874f0cd48e60df3&rid=giphy.gif&ct=s",
-]; // HTML, CSS, JS, React, VS Code, Git, Python
+  "./assets/gifs/html.webp",
+  "./assets/gifs/css.webp",
+  "./assets/gifs/js.webp",
+  "./assets/gifs/react.webp",
+  "./assets/gifs/vscode.webp",
+  "./assets/gifs/git.webp",
+  "./assets/gifs/python.webp",
+]; // Creditos: https://giphy.com/devrock
 (function temporizadorIlustracao() {
   ilustracao.src = listaIlustracoes[contadorIlustracao];
   contadorIlustracao =
