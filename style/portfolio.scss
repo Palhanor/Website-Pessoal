@@ -1,17 +1,26 @@
 .portfolio {
-  @extend %secao;
+  margin: 0;
+
+  @include laptop() {
+    margin: 6vh 5vw 10vh;
+  }
 
   &__titulo {
     @extend %titulo-secao;
+    margin-left: 7vw;
+
+    @include laptop() {
+      margin-left: 0;
+    }
   }
 
   &__cards {
     margin-top: 2rem;
     list-style: none;
     display: grid;
-    gap: 2rem;
 
     @include laptop() {
+      gap: 2rem;
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -20,36 +29,34 @@
     &-borda {
       @include backgroundImage("./assets/background.png");
       height: 32vh;
-      border-radius: 10px;
       box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
       transition: 0.2s;
 
       @include laptop() {
         height: 26rem;
         border-radius: 20px;
+        cursor: pointer;
 
         &:hover {
           padding: 6px;
         }
-  
+
         &:hover .portfolio__card-tela {
           display: block;
         }
-  
+
         &:hover .portfolio__card-texto {
           display: block;
         }
-  
+
         &:hover .portfolio__card-imagem {
           filter: grayscale(100%) blur(1px);
         }
       }
-
     }
 
     &-imagem {
       height: 100%;
-      border-radius: 7px;
       display: block;
 
       @include laptop() {

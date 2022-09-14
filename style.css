@@ -1,8 +1,8 @@
-.curriculo, .artigos, .portfolio, .sobre {
+.curriculo, .artigos, .sobre {
   margin: 6vh 7vw 12vh;
 }
 @media (min-width: 1280px) {
-  .curriculo, .artigos, .portfolio, .sobre {
+  .curriculo, .artigos, .sobre {
     margin: 6vh 5vw 10vh;
   }
 }
@@ -513,6 +513,9 @@ body {
     margin-right: 3rem;
     max-height: 20rem;
   }
+  .sobre__insignias-borda:first-child {
+    margin-top: 3.5rem;
+  }
 }
 .sobre__insignias-conteudo {
   height: 100%;
@@ -528,6 +531,7 @@ body {
 @media (min-width: 1280px) {
   .sobre__insignias-conteudo {
     padding: 1rem;
+    cursor: pointer;
   }
 }
 @media (min-width: 1920px) {
@@ -572,7 +576,7 @@ body {
 @media (min-width: 1280px) {
   .sobre__insignias-grid {
     gap: 15px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 .sobre__insignias-grid li {
@@ -616,14 +620,30 @@ body {
   }
 }
 
+.portfolio {
+  margin: 0;
+}
+@media (min-width: 1280px) {
+  .portfolio {
+    margin: 6vh 5vw 10vh;
+  }
+}
+.portfolio__titulo {
+  margin-left: 7vw;
+}
+@media (min-width: 1280px) {
+  .portfolio__titulo {
+    margin-left: 0;
+  }
+}
 .portfolio__cards {
   margin-top: 2rem;
   list-style: none;
   display: grid;
-  gap: 2rem;
 }
 @media (min-width: 1280px) {
   .portfolio__cards {
+    gap: 2rem;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -633,7 +653,6 @@ body {
   background-position: center;
   background-size: cover;
   height: 32vh;
-  border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
   transition: 0.2s;
 }
@@ -641,6 +660,7 @@ body {
   .portfolio__card-borda {
     height: 26rem;
     border-radius: 20px;
+    cursor: pointer;
   }
   .portfolio__card-borda:hover {
     padding: 6px;
@@ -657,7 +677,6 @@ body {
 }
 .portfolio__card-imagem {
   height: 100%;
-  border-radius: 7px;
   display: block;
 }
 @media (min-width: 1280px) {
@@ -920,6 +939,62 @@ body {
   .rodape span {
     font-size: 0.9rem;
   }
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  overflow-y: hidden;
+}
+.modal__fechar {
+  color: #ffffff;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+  width: 20px;
+  height: 20px;
+  background-image: url("./assets/icones/fechar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.modal__portfolio-container {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  background-color: #ffffff;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+@media (min-width: 1280px) {
+  .modal__portfolio-container {
+    width: 60%;
+    height: 100vh;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.modal__portfolio-imagens {
+  height: 50vh;
+  object-fit: cover;
+}
+@media (min-width: 1280px) {
+  .modal__portfolio-imagens {
+    height: 60vh;
+  }
+}
+.modal__portfolio-conteudo {
+  min-height: 40vh;
+  padding: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

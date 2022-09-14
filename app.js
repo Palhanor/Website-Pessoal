@@ -199,21 +199,6 @@ const listaIlustracoes = [
   setTimeout(temporizadorIlustracao, 2000);
 })();
 
-/* OUTROS GIFS
-- https://media0.giphy.com/media/nj8meeDBjFZGlTJBQk/giphy.gif?cid=790b7611c3c7ea550a3d76425e9885e4764a334b4865a251&rid=giphy.gif&ct=s
-- https://media4.giphy.com/media/pZREZQ5wQrogo/giphy.gif?cid=790b76115dd5389e7540367e98425a15283c849a8c4d6afc&rid=giphy.gif&ct=s
-- https://media0.giphy.com/media/FMNfRDF1FmjZ8Sghth/giphy.gif?cid=790b7611d5055b8063f7990448688cefd81fce58cea8b2ee&rid=giphy.gif&ct=s
-- https://giphy.com/stickers/programming-404-topnode-hS42TuYYnANLFR9IRQ
-- https://giphy.com/stickers/tv-emoore-emooreart-YrTXcn2uKFbJvVvJgY
-- https://giphy.com/stickers/welcome-youre-yer-welx-4N3Mqhl8JRyYLapZgt
-- https://giphy.com/stickers/hi-hola-saludos-kBZ212yGzFaxgkSIKW
-- https://giphy.com/stickers/udocz-transparent-OphWiURz4aZ2isAmrc
-- https://giphy.com/stickers/transparent-LPkVjKCuLJiTlooiFn
-- https://giphy.com/stickers/MozillaFoundation-internet-web-mozilla-ehIw3wY1QVv6cUHxKk
-- https://giphy.com/stickers/MozillaFoundation-internet-web-mozilla-jmSi1xSHBJuDfQTiEN
-- https://giphy.com/stickers/firefox-world-wide-web-surfing-the-mytruecolors-zuhx2aS1uKnG9BLomb
-- https://giphy.com/stickers/90s-internet-the-loneliest-show-on-HqQOFWDTDMZgnl4mOJ
-*/
 
 // AJEITAR A ESTILIZAÇÃO PARA REMOVER O STYLE INLINE
 // SISTEMA DE EXPANSAO DAS INSIGNIAS
@@ -280,4 +265,78 @@ ferramentas.addEventListener("click", () => {
     ferramentasContainer.style.height = "4rem";
     ferramentasInsignias.style.display = "none";
   }
+});
+
+// // GERADOR DE MODAL DO PORTFOLIO
+const modal = document.querySelector(".modal");
+const notely = document.querySelector("#notely");
+const qrkey = document.querySelector("#qrkey");
+const dynos = document.querySelector("#dynos");
+const website = document.querySelector("#website");
+
+function fecharModal() {
+  modal.innerHTML = "";
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+modal.addEventListener("click", fecharModal);
+
+// Adicionar campo para tags e links
+function gerarModalPortfolio(gif, titulo, descricao) {
+  modal.innerHTML = `
+<div class="modal__portfolio-container">
+  <div class="modal__fechar" onclick="fecharModal()"></div>
+  <img class="modal__portfolio-imagens" src="${gif}" alt="Gif exibindo o aplicativo">
+  <div class="modal__portfolio-conteudo">
+    <h3 class="portfolio__card-titulo">${titulo}</h3>
+    <p class="portfolio__card-descricao">${descricao}</p>
+  </div>
+</div>
+`;
+}
+
+// Modificar os gifs para gifs do projeto
+notely.addEventListener("click", () => {
+  const imagem = "https://c.tenor.com/eH_NX_5TkdwAAAAC/i-phone-x-find-app.gif";
+  const titulo = "Notely";
+  const descricao =
+    "O Notely é um sistema otimizado de criação e gestão de notas em markdown, que permite uma maior produtividade por aliar simplicidade, organização e personalização.";
+  gerarModalPortfolio(imagem, titulo, descricao);
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+// Modificar os gifs para gifs do projeto
+qrkey.addEventListener("click", () => {
+  const imagem = "https://i.gifer.com/Y3jb.gif";
+  const titulo = "QR Key";
+  const descricao =
+    "O QR Key tem como intuito de permitir a criação e visualização de QR Codes privados de forma simples e intuitiva, bastando configurar uma senha mestra necessária para sua decodificação.";
+  gerarModalPortfolio(imagem, titulo, descricao);
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+// Modificar os gifs para gifs do projeto
+dynos.addEventListener("click", () => {
+  const imagem =
+    "https://cdn.dribbble.com/users/1998175/screenshots/6513403/dribbble.gif";
+  const titulo = "DynOS";
+  const descricao =
+    "DynOS (Dynamic OS) se trata de um programa desktop voltado para a automação na manipulação de arquivos e diretórios do computador de forma dinâmica e automatizada.";
+  gerarModalPortfolio(imagem, titulo, descricao);
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+// Modificar os gifs para gifs do projeto
+website.addEventListener("click", () => {
+  const imagem =
+    "https://miro.medium.com/max/1400/1*ncd7VKSohRSJKk-beuUCmw.gif";
+  const titulo = "Website Pessoal";
+  const descricao =
+    "Website pessoal criado como uma vitrine profissional própria, contendo informações relevantes acerca de minha trajetória, motivações e projetos realizados ao longo do tempo.";
+  gerarModalPortfolio(imagem, titulo, descricao);
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden";
 });
