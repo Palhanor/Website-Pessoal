@@ -10,16 +10,6 @@ if (screenWidth >= 1280) {
     "max-glare": 0.4,
   });
 
-  // CARD DAS INSIGNIAS
-  VanillaTilt.init(document.querySelector(".sobre__insignias-borda"), {
-    max: 5,
-    speed: 200,
-    transition: true,
-    glare: true,
-    "max-glare": 0.7,
-    scale: 1.2,
-  });
-
   // CARD DO NOTELY
   VanillaTilt.init(document.querySelector("#notely"), {
     max: 3,

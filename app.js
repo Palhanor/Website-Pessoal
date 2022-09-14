@@ -214,3 +214,70 @@ const listaIlustracoes = [
 - https://giphy.com/stickers/firefox-world-wide-web-surfing-the-mytruecolors-zuhx2aS1uKnG9BLomb
 - https://giphy.com/stickers/90s-internet-the-loneliest-show-on-HqQOFWDTDMZgnl4mOJ
 */
+
+// AJEITAR A ESTILIZAÇÃO PARA REMOVER O STYLE INLINE
+// SISTEMA DE EXPANSAO DAS INSIGNIAS
+const [linguagens, frameworks, ferramentas] = document.querySelectorAll(
+  ".sobre__insignias-conteudo"
+);
+const [linguagensContainer, frameworksContainer, ferramentasContainer] =
+  document.querySelectorAll(".sobre__insignias-borda");
+const [linguagensInsignias, frameworksInsignias, ferramentasInsignias] =
+  document.querySelectorAll(".sobre__insignias-grid");
+let linguagensAberto = false;
+let frameworksAberto = false;
+let ferramentasAberto = false;
+
+linguagens.addEventListener("click", () => {
+  if (!linguagensAberto) frameworksAberto = false;
+  if (!linguagensAberto) ferramentasAberto = false;
+  linguagensAberto = !linguagensAberto;
+
+  if (linguagensAberto) {
+    linguagensContainer.style.height = "auto";
+    linguagensInsignias.style.display = "grid";
+    frameworksContainer.style.height = "4rem";
+    frameworksInsignias.style.display = "none";
+    ferramentasContainer.style.height = "4rem";
+    ferramentasInsignias.style.display = "none";
+  } else {
+    linguagensContainer.style.height = "4rem";
+    linguagensInsignias.style.display = "none";
+  }
+});
+
+frameworks.addEventListener("click", () => {
+  if (!frameworksAberto) linguagensAberto = false;
+  if (!frameworksAberto) ferramentasAberto = false;
+  frameworksAberto = !frameworksAberto;
+
+  if (frameworksAberto) {
+    frameworksContainer.style.height = "auto";
+    frameworksInsignias.style.display = "grid";
+    linguagensContainer.style.height = "4rem";
+    linguagensInsignias.style.display = "none";
+    ferramentasContainer.style.height = "4rem";
+    ferramentasInsignias.style.display = "none";
+  } else {
+    frameworksContainer.style.height = "4rem";
+    frameworksInsignias.style.display = "none";
+  }
+});
+
+ferramentas.addEventListener("click", () => {
+  if (!ferramentasAberto) linguagensAberto = false;
+  if (!ferramentasAberto) frameworksAberto = false;
+  ferramentasAberto = !ferramentasAberto;
+
+  if (ferramentasAberto) {
+    ferramentasContainer.style.height = "auto";
+    ferramentasInsignias.style.display = "grid";
+    linguagensContainer.style.height = "4rem";
+    linguagensInsignias.style.display = "none";
+    frameworksContainer.style.height = "4rem";
+    frameworksInsignias.style.display = "none";
+  } else {
+    ferramentasContainer.style.height = "4rem";
+    ferramentasInsignias.style.display = "none";
+  }
+});

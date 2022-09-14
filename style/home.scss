@@ -108,10 +108,12 @@
     @include backgroundImage("./assets/icones/down.png");
     height: 30px;
     width: 50px;
-
+    margin-bottom: 30px;
+    
     @include laptop() {
       height: 25px;
       width: 40px;
+      margin-bottom: 0;
     }
 
     @include desktop() {

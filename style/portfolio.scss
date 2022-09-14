@@ -25,29 +25,26 @@
       transition: 0.2s;
 
       @include laptop() {
-        height: 62vh;
+        height: 26rem;
         border-radius: 20px;
+
+        &:hover {
+          padding: 6px;
+        }
+  
+        &:hover .portfolio__card-tela {
+          display: block;
+        }
+  
+        &:hover .portfolio__card-texto {
+          display: block;
+        }
+  
+        &:hover .portfolio__card-imagem {
+          filter: grayscale(100%) blur(1px);
+        }
       }
 
-      @include desktop() {
-        height: 40vh;
-      }
-
-      &:hover {
-        padding: 6px;
-      }
-
-      &:hover .portfolio__card-tela {
-        display: block;
-      }
-
-      &:hover .portfolio__card-texto {
-        display: block;
-      }
-
-      &:hover .portfolio__card-imagem {
-        filter: grayscale(100%) blur(1px);
-      }
     }
 
     &-imagem {

@@ -20,28 +20,32 @@
   }
 
   &__insignias {
-    &-borda {
-      @include backgroundImage("./assets/background.png");
-      border-radius: 20px;
-      padding: 3px;
-      box-shadow: 3px 3px 39px rgba(0, 0, 0, 0.03);
-      margin-top: 3rem;
+    &-container {
 
       @include laptop() {
-        width: 30%;
+        width: 35%;
+      }
+    }
+
+    &-borda {
+      @include backgroundImage("./assets/background.png");
+      border-radius: 10px;
+      padding: 3px;
+      box-shadow: 3px 3px 39px rgba(0, 0, 0, 0.03);
+      margin-top: 1rem;
+      height: 3.6rem;
+      
+      @include laptop() {
+        height: 4rem;
         margin-right: 3rem;
         max-height: 20rem;
-      }
-
-      @include desktop() {
-        max-height: 30rem;
       }
     }
 
     &-conteudo {
       height: 100%;
       background-color: $white;
-      border-radius: 18px;
+      border-radius: 7px;
       padding: 1rem 1rem 2rem 1rem;
 
       @include tablet() {
@@ -53,13 +57,13 @@
       }
 
       @include desktop() {
-        padding: 2rem;
+        padding: 1rem;
       }
     }
 
     &-titulo {
-      text-align: center;
-      font-size: 1.2rem;
+      text-align: left;
+      font-size: 1rem;
       color: $cinzaSemiEscuro;
       margin-bottom: 1.5rem;
 
@@ -67,8 +71,9 @@
         font-size: 1.4rem;
         margin-bottom: 2.5rem;
       }
-
+      
       @include laptop() {
+        font-size: 1.2rem;
         margin-bottom: 1.5rem;
       }
 
@@ -79,7 +84,7 @@
 
     &-grid {
       list-style: none;
-      display: grid;
+      display: none;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 25px;
 
@@ -89,6 +94,7 @@
 
       @include laptop() {
         gap: 15px;
+        margin-bottom: 2rem;
       }
 
       li {

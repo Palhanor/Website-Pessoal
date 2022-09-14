@@ -462,11 +462,13 @@ body {
   background-size: cover;
   height: 30px;
   width: 50px;
+  margin-bottom: 30px;
 }
 @media (min-width: 1280px) {
   .home__rolar {
     height: 25px;
     width: 40px;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1920px) {
@@ -489,32 +491,33 @@ body {
     width: 60%;
   }
 }
+@media (min-width: 1280px) {
+  .sobre__insignias-container {
+    width: 35%;
+  }
+}
 .sobre__insignias-borda {
   background-image: url("./assets/background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 3px;
   box-shadow: 3px 3px 39px rgba(0, 0, 0, 0.03);
-  margin-top: 3rem;
+  margin-top: 1rem;
+  height: 3.6rem;
 }
 @media (min-width: 1280px) {
   .sobre__insignias-borda {
-    width: 30%;
+    height: 4rem;
     margin-right: 3rem;
     max-height: 20rem;
-  }
-}
-@media (min-width: 1920px) {
-  .sobre__insignias-borda {
-    max-height: 30rem;
   }
 }
 .sobre__insignias-conteudo {
   height: 100%;
   background-color: #ffffff;
-  border-radius: 18px;
+  border-radius: 7px;
   padding: 1rem 1rem 2rem 1rem;
 }
 @media (min-width: 768px) {
@@ -529,12 +532,12 @@ body {
 }
 @media (min-width: 1920px) {
   .sobre__insignias-conteudo {
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 .sobre__insignias-titulo {
-  text-align: center;
-  font-size: 1.2rem;
+  text-align: left;
+  font-size: 1rem;
   color: #4f4f4f;
   margin-bottom: 1.5rem;
 }
@@ -546,6 +549,7 @@ body {
 }
 @media (min-width: 1280px) {
   .sobre__insignias-titulo {
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
   }
 }
@@ -556,7 +560,7 @@ body {
 }
 .sobre__insignias-grid {
   list-style: none;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 25px;
 }
@@ -568,6 +572,7 @@ body {
 @media (min-width: 1280px) {
   .sobre__insignias-grid {
     gap: 15px;
+    margin-bottom: 2rem;
   }
 }
 .sobre__insignias-grid li {
@@ -634,26 +639,21 @@ body {
 }
 @media (min-width: 1280px) {
   .portfolio__card-borda {
-    height: 62vh;
+    height: 26rem;
     border-radius: 20px;
   }
-}
-@media (min-width: 1920px) {
-  .portfolio__card-borda {
-    height: 40vh;
+  .portfolio__card-borda:hover {
+    padding: 6px;
   }
-}
-.portfolio__card-borda:hover {
-  padding: 6px;
-}
-.portfolio__card-borda:hover .portfolio__card-tela {
-  display: block;
-}
-.portfolio__card-borda:hover .portfolio__card-texto {
-  display: block;
-}
-.portfolio__card-borda:hover .portfolio__card-imagem {
-  filter: grayscale(100%) blur(1px);
+  .portfolio__card-borda:hover .portfolio__card-tela {
+    display: block;
+  }
+  .portfolio__card-borda:hover .portfolio__card-texto {
+    display: block;
+  }
+  .portfolio__card-borda:hover .portfolio__card-imagem {
+    filter: grayscale(100%) blur(1px);
+  }
 }
 .portfolio__card-imagem {
   height: 100%;
