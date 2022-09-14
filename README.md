@@ -2,13 +2,14 @@
 
 **Correção**
 
-1. Fazer ajustes das insignias para tablet (tem mais?)
-2. Fazer ajustes dos cards do portfolio para tablet
-3. Fazer ajustes do modal para tablet, laptop e desktop
-4. Criar os gifs dos sistemas para adicionar no modal do projeto
-5. Evitar que o modal feche quando clicar no conteúdo ou na imagem
-6. Melhorar o sistema de rolagem da página para acertar o seção
-7. Corrigir o problema do cache dos estilos na Hostinger
+1. Adicionar Figma e Gulp dentro de Ferramentas
+2. Fazer ajustes das insignias para tablet (tem mais?)
+3. Fazer ajustes dos cards do portfolio para tablet
+4. Fazer ajustes do modal para tablet, laptop e desktop
+5. Criar os gifs dos sistemas para adicionar no modal do projeto
+6. Evitar que o modal feche quando clicar no conteúdo ou na imagem
+7. Melhorar o sistema de rolagem da página para acertar o seção
+8. Corrigir o problema do cache dos estilos na Hostinger
 
 ---
 
