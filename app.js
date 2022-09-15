@@ -303,7 +303,6 @@ function gerarModalPortfolio(gif, titulo, descricao, video = "") {
 `;
 }
 
-// Modificar os gifs para gifs do projeto
 notely.addEventListener("click", () => {
   const imagem = "./assets/projetos/notely.gif";
   const titulo = "Notely";
@@ -315,37 +314,37 @@ notely.addEventListener("click", () => {
   document.body.style.overflow = "hidden";
 });
 
-// Modificar os gifs para gifs do projeto
 qrkey.addEventListener("click", () => {
   const imagem = "./assets/projetos/qrkey.png";
   const titulo = "QR Key";
   const descricao =
     "O QR Key tem como intuito de permitir a criação e visualização de QR Codes privados de forma simples e intuitiva, bastando configurar uma senha mestra necessária para sua decodificação.";
-  gerarModalPortfolio(imagem, titulo, descricao);
+  const video = "./assets/projetos/qrkey.mp4";
+  gerarModalPortfolio(imagem, titulo, descricao, video);
   modal.style.display = "block";
   document.body.style.overflow = "hidden";
 });
 
-// Modificar os gifs para gifs do projeto
+// Fazer uma demonstração que não envolva dados sensíveis
 dynos.addEventListener("click", () => {
   const imagem =
   "./assets/projetos/dynos.png";
   const titulo = "DynOS";
   const descricao =
     "DynOS (Dynamic OS) se trata de um programa desktop voltado para a automação na manipulação de arquivos e diretórios do computador de forma dinâmica e automatizada.";
-  gerarModalPortfolio(imagem, titulo, descricao);
+    gerarModalPortfolio(imagem, titulo, descricao);
   modal.style.display = "block";
   document.body.style.overflow = "hidden";
 });
 
-// Modificar os gifs para gifs do projeto
 website.addEventListener("click", () => {
   const imagem =
   "./assets/projetos/website.png";
   const titulo = "Website Pessoal";
   const descricao =
     "Website pessoal criado como uma vitrine profissional própria, contendo informações relevantes acerca de minha trajetória, motivações e projetos realizados ao longo do tempo.";
-  gerarModalPortfolio(imagem, titulo, descricao);
+    const video = "./assets/projetos/website.mp4";
+    gerarModalPortfolio(imagem, titulo, descricao, video);
   modal.style.display = "block";
   document.body.style.overflow = "hidden";
 });
